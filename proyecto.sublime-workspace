@@ -1,0 +1,779 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"no",
+				"notificaciones"
+			],
+			[
+				"time",
+				"timeNow"
+			],
+			[
+				"id",
+				"idgalpon"
+			],
+			[
+				"consumo",
+				"consumos_alimentos"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"reque",
+				"required"
+			],
+			[
+				"ti",
+				"timeOnline"
+			],
+			[
+				"pa",
+				"pagination"
+			],
+			[
+				"pro",
+				"props"
+			],
+			[
+				"fu",
+				"fullPath"
+			],
+			[
+				"us",
+				"usuario"
+			],
+			[
+				"Lo",
+				"LockScreen"
+			],
+			[
+				"lo",
+				"LockScreen"
+			],
+			[
+				"ro",
+				"route"
+			],
+			[
+				"dro",
+				"dropdown-item"
+			],
+			[
+				"col",
+				"col-md-6"
+			],
+			[
+				"hue",
+				"huevos"
+			],
+			[
+				"de",
+				"detalles"
+			],
+			[
+				"query",
+				"queryDate"
+			],
+			[
+				"ca",
+				"cantidad"
+			],
+			[
+				"com",
+				"compra"
+			],
+			[
+				"me",
+				"medicina"
+			],
+			[
+				"data",
+				"dataConsulta"
+			],
+			[
+				"dat",
+				"dataConsulta"
+			],
+			[
+				"clas",
+				"class_exists"
+			],
+			[
+				"d",
+				"disabled	Attr"
+			],
+			[
+				"log",
+				"logContent"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"Nu",
+				"numPages"
+			],
+			[
+				"num",
+				"numPages"
+			],
+			[
+				"pagi",
+				"pagination"
+			],
+			[
+				"pagina",
+				"pagination"
+			],
+			[
+				"paginat",
+				"paginatioPrev"
+			],
+			[
+				"page",
+				"pages"
+			],
+			[
+				"huevos_",
+				"huevos_grandes"
+			],
+			[
+				"w",
+				"where_med"
+			],
+			[
+				"mo",
+				"moth"
+			],
+			[
+				"Su",
+				"submit"
+			],
+			[
+				"Ase",
+				"assetsPublicPath"
+			],
+			[
+				"selec",
+				"selectpdf"
+			],
+			[
+				"nomina",
+				"nominapdf"
+			],
+			[
+				"nam",
+				"nameActive"
+			],
+			[
+				"co",
+				"consultaResumen"
+			],
+			[
+				"nu",
+				"numPages"
+			],
+			[
+				"a",
+				"asistencia"
+			],
+			[
+				"res",
+				"resumen"
+			],
+			[
+				"emple",
+				"empleados"
+			],
+			[
+				"cerra",
+				"cerrado"
+			],
+			[
+				"sa",
+				"status"
+			],
+			[
+				"comp",
+				"components"
+			],
+			[
+				"pass",
+				"pass2"
+			],
+			[
+				"editar",
+				"editar_usuario"
+			],
+			[
+				"ga",
+				"gastos"
+			],
+			[
+				"eje",
+				"ejectado"
+			],
+			[
+				"la",
+				"labels"
+			],
+			[
+				"in",
+				"inventario"
+			],
+			[
+				"lis",
+				"list_medicinas"
+			],
+			[
+				"como",
+				"componete"
+			],
+			[
+				"li",
+				"list-ventas-aves"
+			],
+			[
+				"list-",
+				"list-compras-aves"
+			],
+			[
+				"is",
+				"isRoot"
+			],
+			[
+				"ini",
+				"inicio-admin"
+			],
+			[
+				"M",
+				"MenuAdmin"
+			],
+			[
+				"reesu",
+				"resumen_huevos"
+			],
+			[
+				"ventas",
+				"ventas"
+			],
+			[
+				"agre",
+				"agregar_huevos"
+			],
+			[
+				"ager",
+				"agregar_huevos"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"l",
+				"link"
+			],
+			[
+				"list",
+				"list-medicinas"
+			],
+			[
+				"agreg",
+				"agregar-granjas"
+			],
+			[
+				"resu",
+				"resumen_granja"
+			],
+			[
+				"agregra",
+				"agregar_granjas"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"cou",
+				"course-foother"
+			],
+			[
+				"cours",
+				"course"
+			],
+			[
+				"courseH",
+				"courseHeader"
+			],
+			[
+				"st",
+				"String"
+			],
+			[
+				"t",
+				"title"
+			],
+			[
+				"St",
+				"styleClass"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "front-end/src/components/reusables/notificaciones.vue",
+			"settings":
+			{
+				"buffer_size": 5886,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "front-end/src/components/view/login/LockScreen.vue",
+			"settings":
+			{
+				"buffer_size": 2323,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "front-end/src/assets/js/DataChartFormat.js",
+			"settings":
+			{
+				"buffer_size": 1754,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Bookmarks: Clear All"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/E/www/polleras/front-end/src/components/view/alimentos/estadisticas-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/reusables/notificaciones.vue",
+		"/E/www/polleras/front-end/src/store/settings.js",
+		"/E/www/polleras/CcMvc.bat",
+		"/E/www/polleras/CcMvc",
+		"/E/www/polleras/Migracion.bat",
+		"/E/www/polleras/front-end/src/assets/js/UserVueFilter.js",
+		"/E/www/polleras/front-end/src/components/layaut/main-layaut.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/resumen-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/estadisticas-aves.vue",
+		"/E/www/polleras/front-end/src/components/reusables/consulta-resumen.vue",
+		"/E/www/polleras/front-end/src/assets/js/Date.js",
+		"/E/www/polleras/front-end/src/components/view/empleados/pagar-nomina.vue",
+		"/E/www/polleras/front-end/src/components/view/settings/settings.vue",
+		"/E/www/polleras/front-end/src/components/view/alimentos/list-compras-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/view/alimentos/list-consumos-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/view/inicio/inicio.vue",
+		"/E/www/polleras/front-end/src/components/view/empleados/agregar-empleados.vue",
+		"/E/www/polleras/front-end/src/components/view/empleados/list-pagos.vue",
+		"/E/www/polleras/front-end/src/components/view/empleados/list-nomina.vue",
+		"/E/www/polleras/front-end/src/components/layaut/login-layaut.vue",
+		"/E/www/polleras/front-end/src/components/view/alimentos/agregar-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/list-compras-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/agregar-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/venta-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/list-compras-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/estadisticas-huevos.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/list-ventas-huevos.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/venta-huevos.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/agregar-huevos.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/list-ventas-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/compra-medicinas.vue",
+		"/E/www/polleras/front-end/src/App.vue",
+		"/E/www/polleras/front-end/src/store/auth.js",
+		"/E/www/polleras/front-end/src/store/index.js",
+		"/E/www/polleras/front-end/src/assets/js/DataChartFormat.js",
+		"/E/www/polleras/front-end/src/components/view/aves/list-mortalidad-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/aves/mortalidad-aves.vue",
+		"/E/www/polleras/front-end/src/components/view/alimentos/consumo-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/resumen-huevos.vue",
+		"/E/www/polleras/front-end/src/assets/menu.js",
+		"/E/www/polleras/front-end/src/router/admin.js",
+		"/E/www/polleras/front-end/src/components/view/medicinas/resumen-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/alimentos/resumen-alimentos.vue",
+		"/E/www/polleras/front-end/src/components/view/galpones/select-galpon.vue",
+		"/E/www/librerias y pruevas/CodigoBarras/WebCodeCam-master/index.html",
+		"/E/www/polleras/protected/settings.json",
+		"/E/www/polleras/front-end/src/assets/js/delete.js",
+		"/E/www/polleras/protected/Config/DB.php",
+		"/E/www/polleras/front-end/src/components/view/medicinas/list-consumos-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/huevos/list-produccion-huevos.vue",
+		"/E/www/polleras/protected/controllers/Cempleados.php",
+		"/E/www/polleras/front-end/src/components/view/empleados/list-asistencia.vue",
+		"/E/www/polleras/front-end/src/components/reusables/list.vue",
+		"/E/www/polleras/front-end/src/components/view/login/login-form.vue",
+		"/E/www/polleras/front-end/src/components/view/login/LockScreen.vue",
+		"/E/www/polleras/front-end/src/components/layaut/profile.vue",
+		"/E/www/polleras/front-end/src/components/reusables/header-menu.vue",
+		"/E/www/polleras/protected/model/ReporteFPDF.php",
+		"/E/www/polleras/front-end/package.json",
+		"/E/www/polleras/README.MD",
+		"/E/www/CcMvc/README.md",
+		"/E/www/polleras/front-end/config/index.js",
+		"/E/www/polleras/front-end/RestApi.json",
+		"/E/www/polleras/protected/Config/Autenticate.php",
+		"/E/www/polleras/front-end/index.html",
+		"/E/www/De terceros/login/cambia_pass.php",
+		"/E/www/De terceros/login/funcs/funcs.php",
+		"/E/www/polleras/front-end/src/components/reusables/aside-menu.vue",
+		"/E/www/polleras/front-end/src/components/view/empleados/resumen-empleados.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/agregar-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/compras-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/consumo-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/consumos-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/list-medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/medicinas/medicinas.vue",
+		"/E/www/polleras/front-end/src/components/view/settings/editar-contrasena.vue",
+		"/E/www/polleras/front-end/src/router/login.js",
+		"/E/www/polleras/front-end/src/components/view/settings/usuarios.vue",
+		"/E/www/polleras/front-end/src/components/view/settings/editar-usuario.vue",
+		"/E/www/polleras/front-end/src/components/view/settings/sessiones.vue",
+		"/E/www/polleras/front-end/src/components/view/settings/registro-usuario.vue",
+		"/E/www/polleras/api/index.php",
+		"/E/www/polleras/front-end/src/components/reusables/formulario.vue",
+		"/E/www/polleras/front-end/src/components/reusables/index.js",
+		"/E/www/polleras/protected/controllers/Cuser.php",
+		"/E/www/polleras/front-end/src/components/reusables/show-pdf.vue",
+		"/E/www/polleras/front-end/src/main.js",
+		"/E/www/polleras/front-end/src/components/view/login404.vue",
+		"/E/www/polleras/front-end/src/components/view/Admin401.vue",
+		"/E/www/polleras/vendor/ccmvc/ccmvc/src/Mvc/view/Error404.php",
+		"/E/www/polleras/front-end/src/components/view/Admin404.vue",
+		"/E/www/polleras/protected/controllers/Cmedicinas.php",
+		"/E/www/polleras/protected/controllers/Csettings.php",
+		"/E/www/C.T.E.G/protected/controllers/Cmantenimiento.php",
+		"/E/www/polleras/protected/model/Auth.php",
+		"/E/www/polleras/protected/Config/debung.php",
+		"/E/www/C.T.E.G/protected/controllers/Cautor.php",
+		"/E/www/polleras/front-end/src/router/index.js",
+		"/E/www/polleras/front-end/node_modules/bootstrap-vue/es/components/dropdown/dropdown.js",
+		"/E/webguardada/vali-admin-master/src/pug/includes/_javascript.pug",
+		"/E/webguardada/vali-admin-master/docs/js/plugins/dataTables.bootstrap.min.js",
+		"/E/www/polleras/front-end/node_modules/vue-pdf/README.md",
+		"/E/www/polleras/front-end/src/components/reusables/show-pdf2.vue",
+		"/E/www/polleras/protected/controllers/Chuevos.php",
+		"/E/www/polleras/protected/controllers/Caves.php",
+		"/E/www/polleras/protected/controllers/Calimentos.php",
+		"/E/www/polleras/vendor/ccmvc/ccmvc/src/Cc/DataBase/MySQLi.php",
+		"/E/www/polleras/vendor/ccmvc/ccmvc/src/Cc/DataBase/PDO.php",
+		"/E/www/polleras/vendor/ccmvc/ccmvc/src/Cc/DataBase/SQLite3.php",
+		"/E/www/polleras/protected/model/FormModel/Huevos.php",
+		"/E/www/polleras/front-end/src/assets/js/meses.js",
+		"/E/www/polleras/protected/controllers/Cindex.php",
+		"/E/www/polleras/requestApi.json",
+		"/E/www/polleras/.htaccess",
+		"/E/www/polleras/protected/layauts/main.php",
+		"/E/www/polleras/public_html/.htaccess",
+		"/E/www/polleras/frontend/src/components/view/settings/sessiones.vue",
+		"/E/www/polleras/frontend/src/store/auth.js",
+		"/E/www/polleras/frontend/src/App.vue",
+		"/E/www/polleras/frontend/src/components/reusables/header-menu.vue",
+		"/E/www/polleras/frontend/src/components/layaut/profile.vue",
+		"/E/www/polleras/frontend/src/components/view/settings/usuarios.vue",
+		"/E/www/polleras/frontend/src/components/view/settings/editar-contrasena.vue",
+		"/E/www/polleras/frontend/src/components/view/settings/registro-usuario.vue",
+		"/E/www/polleras/frontend/src/components/view/settings/editar-usuario.vue",
+		"/E/www/polleras/frontend/src/components/view/medicinas/resumen-medicinas.vue",
+		"/E/www/polleras/frontend/src/components/view/medicinas/medicinas.vue"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"E:\\www\\polleras\\front-end\\src",
+			"E:\\www\\polleras\\front-end",
+			"E:\\www\\polleras\\front-end\\src",
+			"E:\\www\\polleras\\front-end\\src\\components\\view",
+			"E:\\www\\polleras\\front-end\\src",
+			"E:\\www\\polleras\\front-end\\src\\components",
+			"E:\\www\\polleras\\front-end\\src\\components\\view"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"btn-",
+			"btn",
+			"/public_html/",
+			"/polleras/api",
+			"/public_html/",
+			"/polleras/public_html/",
+			"sm",
+			"new Date",
+			"console.log",
+			"select",
+			"size",
+			"resize",
+			"$(",
+			"$",
+			"$('.nav > .nav-item > a').click(e=>{e.preventDefault()})",
+			"@click=\"list",
+			"$(document)",
+			"$(",
+			"let date = new Date();\n			let fecha =date.getFullYear()+'-'+date.getMonth()+'-'+date.getDay();",
+			"-webkit-scrollbar-thumb",
+			"box",
+			".box",
+			"box",
+			"output=",
+			"output",
+			"cursor",
+			"fa-circle",
+			"radio",
+			"checked",
+			"cheked",
+			"checke",
+			"table",
+			"LOCK",
+			"info",
+			"btn",
+			"bnt",
+			"pass",
+			"Line ",
+			"Line",
+			"LIne",
+			"id",
+			"aves",
+			"Show",
+			"'Show",
+			"'Show'",
+			"\"Show\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/",
+			"",
+			"@click.prevent=\"list",
+			"let date = new Date();\n			let month=date.getMonth()+1;\n			let fecha =date.getFullYear()+'-'+(month>9?month:'0'+month)+'-'+date.getDate()",
+			"huevos"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "front-end/src/components/reusables/notificaciones.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5886,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1854,
+								1854
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 684.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "front-end/src/components/view/login/LockScreen.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1293,
+								1293
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 456.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "front-end/src/assets/js/DataChartFormat.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1754,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 165.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "proyecto.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 295.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

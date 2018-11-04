@@ -1,0 +1,13 @@
+{ 
+    "produccion": "95",
+    "moneda": "Bs.S",
+    "nombre": "Granja Avicola",
+    "usoGalpon": "70",
+    "muertes": "30",
+    "umalimentos": "Kg",
+    "imagen": {
+        "type": "image\/jpeg",
+        "ext": "jpg",
+        "ModifiTime": "2018-11-03 00:58:12"
+    }
+}

@@ -1,0 +1,12 @@
+<?php
+
+include (dirname(__FILE__) . "/../vendor/autoload.php");
+//define('__DEBUNG_CONSOLE_', true);
+
+$app = CcMvc::Start(dirname(__FILE__), "Console CcMvc");
+/**
+ * 
+ */
+$app->Console($argv); // inica el funcionamiento del la consola
+
+

@@ -1,0 +1,119 @@
+﻿[
+   {
+      "name": "/polleras/api/settings",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/settings",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   },
+   {
+      "name": "polleras/api/?year=2018",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/?year=2018",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   },
+   {
+      "name": "polleras/api/user/",
+      "method": "POST",
+      "url": "http://localhost/polleras/api/user/",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": {
+         "user": "root",
+         "pass": "root",
+         "recordar": false,
+         "Submited": 1
+      }
+   },
+   {
+      "name": "polleras/api/user/closesessione?id_session=kf0gacbl8av6fcm29kgmu30ds7",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/user/closesessione?id_session=kf0gacbl8av6fcm29kgmu30ds7",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   },
+   {
+      "name": "polleras/api/user/islogin",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/user/islogin",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   },
+   {
+      "name": "polleras/api/user/lista",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/user/lista",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   },
+   {
+      "name": "polleras/api/user/sessiones",
+      "method": "GET",
+      "url": "http://localhost/polleras/api/user/sessiones",
+      "authuser": null,
+      "authpwd": null,
+      "accept": "application/json",
+      "contenttype": "application/json",
+      "headerarray": [
+         {
+            "name": "Content-Type",
+            "value": "application/json"
+         }
+      ],
+      "data": null
+   }
+]
