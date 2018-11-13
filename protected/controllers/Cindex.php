@@ -35,7 +35,7 @@ class Cindex extends CostumController implements AccessUserController
         $month = date('m');
         if ($res['ventas'][$month - 1] - $res['gastos'][$month - 1] < 0)
         {
-            $this->TingerNotificacion("perdidas", "Alerta se estan generando perdidas  de " . ($res['ventas'][$month - 1] - $res['gastos'][$month - 1]) . " " . $this->Settings['moneda'] . " en la granja", "/polleras/", "fa-warning", "danger");
+            $this->TingerNotificacion("perdidas", "Alerta se estan generando perdidas  de " . ($res['ventas'][$month - 1] - $res['gastos'][$month - 1]) . " " . $this->Settings['moneda'] . " en la granja", "/", "fa-warning", "danger");
         } else
         {
             $this->DeleteNotificacion("perdidas");

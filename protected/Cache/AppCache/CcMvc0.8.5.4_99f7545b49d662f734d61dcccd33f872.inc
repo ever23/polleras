@@ -2,7 +2,7 @@
  /**
  * Cache 
  * name: /polleras/api/alimentos/resumen
- * Expire: 2018-12-03 22:11:30
+ * Expire: 2018-12-11 17:52:13
 */
 return array (
   0 => 
@@ -16,5 +16,5 @@ return array (
       'extencion' => NULL,
     ),
   ),
-  1 => 1543891290,
+  1 => 1544547133,
 );?>

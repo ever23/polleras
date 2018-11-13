@@ -1,10 +1,10 @@
 <template>
  <div class="login-box flipped">
-    <form class="forget-form" @submit.prevent="recuperar">
+    <formulario :error="errores"   class="forget-form" @submit.prevent="recuperar">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
           <div class="form-group">
             <label class="control-label">EMAIL</label>
-            <input v-model="email" class="form-control" type="text" placeholder="Email">
+            <input v-model="email" name="email" class="form-control" type="text" placeholder="Email">
           </div>
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block" ><i class="fa fa-unlock fa-lg fa-fw"></i>RESET</button>
@@ -14,7 +14,7 @@
                 <router-link :to="{name:'login'}"> <i class="fa fa-angle-left fa-fw"></i>Regresar</router-link>
             </p>
           </div>
-        </form>
+        </formulario>
     </div>
 </template>
 
@@ -24,7 +24,8 @@ import axios from 'axios';
         name:'recupera-pass',
         data () {
             return {
-                email:null
+                email:null,
+                errores:{}
             }
         },
         components: {
@@ -50,7 +51,7 @@ import axios from 'axios';
                              
                     }else
                     {
-                        AxiosCatch(data.error);
+                        this.errores=request.data.error;
                        
                     }  
                 }).catch(AxiosCatch);

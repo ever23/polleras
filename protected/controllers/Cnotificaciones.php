@@ -25,23 +25,22 @@ class Cnotificaciones extends CostumController implements AccessUserController
         {
             $notificaciones->Update(['visto' => true], "id_notificacion='" . $id_notificacion . "'");
             $res['visto'] = true;
-        } else
-        {
-            $notificaciones->Select(null, null, null, null, null, 'fech_notificacion desc', '20');
-            $res['data'] = $notificaciones->FetchAll();
         }
+        $c->now();
     }
 
-    public function now(Json $res, DBtabla $notificaciones, SelectorControllers $c, $fech_notificacion = null)
+    public function now(Json $res, DBtabla $notificaciones, SelectorControllers $c, Auth $sess, $fech_notificacion = null)
     {
-        $c->aves();
-        $c->CreateController('notificaciones');
+
         $c->alimentos();
-        $notificaciones->Select(null, null, null, null, null, 'fech_notificacion desc', '20');
+        $c->CreateController('notificaciones');
+        $c->aves();
+
+        $notificaciones->Select(null, "id_usuarios='" . $sess['id_usuarios'] . "'", null, null, null, 'fech_notificacion desc', '20');
         $res['data'] = $notificaciones->FetchAll();
         if ($fech_notificacion)
         {
-            $notificaciones->Select(null, "visto=false and fech_notificacion>'" . $fech_notificacion . "'", null, null, null, 'fech_notificacion desc', '20');
+            $notificaciones->Select(null, "id_usuarios='" . $sess['id_usuarios'] . "' and visto=false and fech_notificacion>'" . $fech_notificacion . "'", null, null, null, 'fech_notificacion desc', '20');
             $res['new'] = $notificaciones->FetchAll();
 //$res['new'] = true;
         }
@@ -77,7 +76,7 @@ class Cnotificaciones extends CostumController implements AccessUserController
 
             if ($porcentaje < $this->Settings['usoGalpon'])
             {
-                $this->TingerNotificacion($tinger, $mensaje, "/polleras/aves/" . $row['id_galpon'], "fa-info", "info", '3 day');
+                $this->TingerNotificacion($tinger, $mensaje, "/aves/" . $row['id_galpon'], "fa-info", "info", '3 day');
             } else
             {
                 $this->DeleteNotificacion($tinger);
@@ -121,7 +120,7 @@ class Cnotificaciones extends CostumController implements AccessUserController
             $sumMuertes+=$muertes;
             if ($procentaje_muertes > (int) $this->Settings['muertes'])
             {
-                $this->TingerNotificacion($tinger2, $mensaje2, "/polleras/aves/" . $row['id_galpon'], "fa-warning", "danger", '1 day');
+                $this->TingerNotificacion($tinger2, $mensaje2, "/aves/" . $row['id_galpon'], "fa-warning", "danger", '1 day');
             } else
             {
                 $this->DeleteNotificacion($tinger2);
@@ -152,7 +151,7 @@ class Cnotificaciones extends CostumController implements AccessUserController
                 $mensaje4 = "En el galpon " . $row['nombre'] . " no hay produccion ";
             if ($porcentaje_produccion < (int) $this->Settings['produccion'])
             {
-                $this->TingerNotificacion($tinger4, $mensaje4, "/polleras/huevos/" . $row['id_galpon'], $icon, $tipo, '1 day');
+                $this->TingerNotificacion($tinger4, $mensaje4, "/huevos/" . $row['id_galpon'], $icon, $tipo, '1 day');
             } else
             {
                 $this->DeleteNotificacion($tinger4);
@@ -165,7 +164,7 @@ class Cnotificaciones extends CostumController implements AccessUserController
         $mensaje3 = "EL " . number_format($porcentajeMiertesFinal, 2) . "% de la aves de toda la granja se han muerto este mes ";
         if ($porcentajeMiertesFinal > (int) $this->Settings['muertes'])
         {
-            $this->TingerNotificacion($tinger3, $mensaje3, "/polleras/aves", "fa-warning", "danger", '1 day');
+            $this->TingerNotificacion($tinger3, $mensaje3, "/aves", "fa-warning", "danger", '1 day');
         } else
         {
             $this->DeleteNotificacion($tinger3);
@@ -182,7 +181,7 @@ class Cnotificaciones extends CostumController implements AccessUserController
 
         if ($porcentaje < $this->Settings['usoGalpon'])
         {
-            $this->TingerNotificacion($tinger, $mensaje, "/polleras/aves", "fa-info", "info", '3 day');
+            $this->TingerNotificacion($tinger, $mensaje, "/aves", "fa-info", "info", '3 day');
         } else
         {
             $this->DeleteNotificacion($tinger);
@@ -201,9 +200,12 @@ class Cnotificaciones extends CostumController implements AccessUserController
         $c->resumen();
         $alimentos = $res['alimentos'];
         $media_consumo = $res['media_consumo'];
+
+        ;
+        // var_dump($posible_consumo, cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y')), $row);
         $consumo = 0;
         $tinger = "BajoAlimento";
-        $mensaje = "Alerta le faltan  para cubrir la media de consumo para este mes ";
+        //  $mensaje = "Alerta le faltan  para cubrir el consumo de este mes ";
         $consumo_alimentos->Select(['sum(cantidad) as cantidad', 'fecha'], "YEAR(fecha)='" . $time->format('Y') . "' and MONTH(fecha)='" . $time->format('m') . "' ", null, 'month(fecha)');
         foreach ($consumo_alimentos as $row)
         {
@@ -212,10 +214,10 @@ class Cnotificaciones extends CostumController implements AccessUserController
 
         $alim = $consumo > 0 ? ($consumo / $consumo_alimentos->num_rows) : 0;
         // var_dump($alim + $alimentos, $consumo, $alimentos, $alim, $media_consumo, $consumo_alimentos->num_rows);
-        if (($alim + $alimentos) < $media_consumo)
+        if (($alim + $alimentos) < $res['consumo_mes'])
         {
-            $mensaje = "Alerta le faltan " . number_format($media_consumo - ($alim + $alimentos), 2) . " " . $this->Settings['umalimentos'] . " de alimento para cubrir la media de consumo para este mes ";
-            $this->TingerNotificacion($tinger, $mensaje, "/polleras/alimentos", "fa-warning", "warning", '1 day');
+            $mensaje = "Alerta le faltan " . number_format($res['consumo_mes'] - ($alim + $alimentos), 2) . " " . $this->Settings['umalimentos'] . " de alimento para cubrir el consumo para este mes ";
+            $this->TingerNotificacion($tinger, $mensaje, "/alimentos", "fa-warning", "warning", '1 day');
         } else
         {
             $this->DeleteNotificacion($tinger);

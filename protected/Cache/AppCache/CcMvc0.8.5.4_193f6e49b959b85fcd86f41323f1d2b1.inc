@@ -2,7 +2,7 @@
  /**
  * Cache 
  * name: /polleras/api/user/islogin
- * Expire: 2018-12-03 22:10:56
+ * Expire: 2018-12-11 17:50:51
 */
 return array (
   0 => 
@@ -16,5 +16,5 @@ return array (
       'extencion' => NULL,
     ),
   ),
-  1 => 1543891256,
+  1 => 1544547051,
 );?>

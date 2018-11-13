@@ -4,7 +4,7 @@
         
         <div>
          <img class="app-sidebar__user-avatar img-fluid " src="/polleras/api/settings/imagen" style="max-width: 90%;" alt="Logo granga">
-          <p class="app-sidebar__user-name">{{ User.nombres }}</p><b><i> ({{ User.permisos }})</i></b>
+          <!--<p class="app-sidebar__user-name">{{ User.nombres }}</p><b><i> ({{ User.permisos }})</i></b>-->
         </div>
       </div>
       <treeview-menu :menu="menu">

@@ -151,7 +151,7 @@ class Caves extends CostumController implements AccessUserController
             $tablapdf3->AddRowArray($row->GetRow(), 6, 'arial', 10);
         }
         $pdf->Table($tablapdf3);
-        $pdf->Output('Reporte de aves.pdf', 'I');
+        $pdf->Output('Reporte de Aves.pdf', 'I');
 
         // $res['pdf'] = "data:application/pdf;base64," . base64_encode($pdf->Output(NULL, 'S'));
     }

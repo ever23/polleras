@@ -9,7 +9,7 @@
     <div><h3>Galpon {{ galpon.nombre  }}</h3></div>
     <div class="btn-group">
 
-      <router-link class="btn btn-success btn-sm" :to="{name:'consumo-alimentos',params:{idgalpon:id_galpon}}" title="Agregar Consumo"><i class="fa fa-shopping-basket"></i></router-link>
+      <router-link class="btn btn-success btn-sm" v-if="galpon.aves>0" :to="{name:'consumo-alimentos',params:{idgalpon:id_galpon}}" title="Agregar Consumo"><i class="fa fa-shopping-basket"></i></router-link>
       
     </div> 
   </div>
@@ -49,7 +49,7 @@
            <list-consumos-alimentos :consumos="consumos" @change="load"/>
               </div>
              <show-pdf v-if="resumen('reporte')" :src="'/polleras/api/alimentos/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" />  
-          </div>
+          </div> 
         </div>
       </div>
   </main>
@@ -90,18 +90,7 @@
                 
             }
         },
-        updated()
-        {
-          $(document).ready(e=>
-            {
-               $('#compras_alimentos').DataTable();
-               $('#consumos_alimentos').DataTable();
-          
-            });
-         
-          
-          
-        },
+       
          watch:
         {
           id_galpon()
@@ -118,10 +107,7 @@
           this.load();
             
         },
-        computed:
-        {
-          
-        },
+       
         methods:
         {
           change_meta(meta)
@@ -153,7 +139,8 @@
                     media_consumo:request.data.media_consumo,
                     alimentos:request.data.alimentos,
                     consumos: this.consumos,
-                    compras:this.compras
+                    compras:this.compras,
+                    consumo_mes:request.data.consumo_mes
                    };
                   // this.pdf=request.data.pdf;
                    

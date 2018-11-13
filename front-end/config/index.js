@@ -16,17 +16,17 @@ module.exports = {
     proxyTable: 
     {
         '/polleras/api':{
-            target: 'http://127.0.0.1:80/polleras/api',
+            target: 'http://127.0.0.1:8080/polleras/api',
             changeOrigin: true,
             pathRewrite: {'^/polleras/api': ''}
         },
         '/polleras/static':{
-            target: 'http://127.0.0.1:8080/static',
+            target: 'http://127.0.0.1:8081/static',
             changeOrigin: true,
             pathRewrite: {'^/polleras/static': ''}
         },
         '/polleras/icono':{
-            target: 'http://127.0.0.1:80/polleras/icono',
+            target: 'http://127.0.0.1:8080/polleras/icono',
             changeOrigin: true,
             pathRewrite: {'/polleras/icono': ''}
         }   
@@ -34,7 +34,7 @@ module.exports = {
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
-    port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
+    port: 8081, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
     notifyOnErrors: true,

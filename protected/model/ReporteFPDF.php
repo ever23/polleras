@@ -24,7 +24,7 @@ class ReporteFPDF extends ExtendsFpdf
      */
     public function Header()
     {
-        
+
         //   parent::Header();
         $file = dirname(__FILE__) . '/../settings.json';
         $Settings = new Json();
@@ -32,20 +32,14 @@ class ReporteFPDF extends ExtendsFpdf
         $this->Image(dirname(__FILE__) . '/../icono', 15, 10, 20, null, $Settings['imagen']['ext']);
         // $this->Image($file, $x, $y, $w, $h, $type, $link)
         $this->SetFont('arial', 'B', 18);
-
         $this->SetXY(40, 10);
-
-        $this->MultiCell(140, 10, strtoupper($Settings['nombre']),  0, 'C');
+        $this->MultiCell(140, 10, strtoupper($Settings['nombre']), 0, 'C');
         $this->Ln();
         $this->SetY(25);
-
-
         parent::TableFpdfHeader();
         $this->CallFnHeader();
         //  $this->Image(dirname(__FILE__) . "/../../img/logo_unefa.png", 180, 10, 17, 20);
         $this->SetCompression(true);
     }
-
-    
 
 }

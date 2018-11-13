@@ -38,7 +38,7 @@
             
             <div v-if="resumen('inventario')" class="compras tile">
                 <h4 class="tile-header">Inventario de Medicinas</h4>
-                 <list-medicinas :medicinas="medicinas" @change="load(null)"></list-medicinas>
+                 <list-medicinas :medicinas="medicinas" :galpon="galpon" @change="load(null)"></list-medicinas>
               </div>
               <div v-if="resumen('compras')" class="compras tile">
                 <h4 class="tile-header">Compras de Medicinas</h4>
@@ -88,16 +88,7 @@
                 
             }
         },
-        updated()
-        {
-          $(document).ready(e=>{
-            $('#list_compras_medicinas').DataTable();
-          $('#list_consumos_medicinas').DataTable();
-           $('#list_medicinas').DataTable();
-           
-          });
-           
-        },
+        
         created()
         {
             if(this.id_galpon)

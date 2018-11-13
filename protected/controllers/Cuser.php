@@ -232,7 +232,7 @@ class Cuser extends Controllers implements AccessUserController
         }
     }
 
-    public function editar(Json $res, DBtabla $usuarios, $id_usuarios)
+    public function editar(Json $res, DBtabla $usuarios, Auth $auth, $id_usuarios)
     {
         $form = new EditarUserForm();
         if ($form->IsSubmited())
@@ -246,6 +246,16 @@ class Cuser extends Controllers implements AccessUserController
             if ($usuarios->Update($form, ['id_usuarios' => $id_usuarios]))
             {
                 $res['editado'] = true;
+                $res['data'] = [
+                    'id_user' => $auth['id_usuarios'],
+                    'user' => $form['user'],
+                    'nombres' => $form['nombres'],
+                    'apellidos' => $form['apellidos'],
+                    'permisos' => $form['permisos'],
+                    'token' => Mvc::App()->GetInternalSession()->GetId(),
+                    //'id_granjas' => $auth['id_granjas'],
+                    'login' => true
+                ];
             } else
             {
                 $res['editado'] = false;

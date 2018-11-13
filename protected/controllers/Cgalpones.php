@@ -15,20 +15,41 @@ class Cgalpones extends CostumController implements AccessUserController
         return [];
     }
 
-    public function index(Json $res, DBtabla $galpones, $id_galpon = null)
+    public function index(Json $res, DBtabla $galpones, DBtabla $consumo_alimentos, Request $r, SelectorControllers $c, $id_galpon = null, $fecha = 'now')
     {
-        if ($id_galpon)
+        $where = $id_galpon ? "id_galpon='" . $id_galpon . "'" : NULL;
+        $time = new \DateTime($fecha);
+
+        // $where = $where ? $where . ' and ' : '';
+        // $having = "consumo_alimentos.fecha='" . date('Y-m-d') . "'";
+
+
+        $galpones->Select(["galpones.*"], $where);
+        //$res['sql'] = $galpones->sql;
+        $gal = [];
+        /*
+         * @var $get DBRow 
+         */
+        foreach ($galpones->FetchAll() as $i => $row)
         {
-            $res['galpones'] = $galpones->Select("id_galpon='" . $id_galpon . "'")->FetchAll();
-        } else
-        {
-            $res['galpones'] = $galpones->Select();
+
+            $r->Get['id_galpon'] = $row['id_galpon'];
+            $c->CreateController('aves');
+            $c->index();
+
+            $consumo_alimentos->Select(['sum(cantidad) as consumo'], "id_galpon='" . $row['id_galpon'] . "' and YEAR(fecha)='" . $time->format('Y') . "' and MONTH(fecha)='" . $time->format('m') . "'  and DAY(fecha)='" . $time->format('d') . "'");
+            $consumo = $consumo_alimentos->num_rows == 1 ? $consumo_alimentos->fetch()->consumo | 0 : 0;
+            $gal[$i] = ['aves' => $res['aves'], 'consumo_dia' => $consumo] + $row->GetRow();
         }
+        unset($res['aves']);
+        unset($res['capacidad']);
+        $r->Get['id_galpon'] = $id_galpon;
+        $res['galpones'] = $gal;
     }
 
     public function resumen(Json $res, DBtabla $galpones, SelectorControllers $s)
     {
-        $res['galpones'] = $galpones->Select()->FetchAll();
+        $s->index();
         $s->CreateController('huevos');
         $s->Resumen();
         $res['ventas_huevos'] = $res['ventas'];

@@ -73,26 +73,13 @@
                
             }
         },
-        updated()
-        {
-          $(document).ready(e=>
-          {
-            $('#compras_alimentos').DataTable();
-            $('#consumos_alimentos').DataTable();
-            
-          });
-          
-          
-        },
+       
         created()
         {
             this.load();
             
         },
-        computed:
-        {
-         
-        },
+       
         methods:
         {
           change_meta(meta)

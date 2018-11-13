@@ -32,6 +32,7 @@ class  galpones extends TablaModel
         $this->Colum('id_galpon')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
         $this->Colum('nombre')->VARCHAR(200);
         $this->Colum('capacidad')->INT(11);
+        $this->Colum('consumo')->FLOAT(10,2);
     }
 
     /**

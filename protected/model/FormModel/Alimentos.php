@@ -18,7 +18,7 @@ class CompraAlimentosForm extends Form
 
         $this->text('cantidad')->Validator("required|numeric")->MensajeError("Cantidad no valida");
         $this->text('costo')->Validator("required|numeric")->MensajeError("Costo no valido");
-        $this->date('fecha')->Validator('required')->MensajeError("Fecha no valida");
+        $this->datetime('fecha')->Validator('required')->MensajeError("Fecha no valida");
         $this->text('detalles')->Validator('required')->MensajeError("Detalles no valido");
     }
 
@@ -44,7 +44,7 @@ class ConsumoAlimentosForm extends Form
     {
         $this->text('id_galpon')->Validator("required|numeric")->MensajeError("Galpon no valido");
         $this->text('cantidad')->Validator("required|numeric")->MensajeError("Cantidad no valida");
-        $this->date('fecha')->Validator('required')->MensajeError("Fecha no valida");
+        $this->datetime('fecha')->Validator('required')->MensajeError("Fecha no valida");
         //  $this->text('id_granjas')->Validator('required|numeric')->MensajeError("Granja no valida");
     }
 

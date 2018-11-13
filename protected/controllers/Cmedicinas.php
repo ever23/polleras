@@ -90,14 +90,15 @@ class Cmedicinas extends CostumController implements AccessUserController
 
     public function consumos(Json $res, DBtabla $consumo_medicinas, $consulta = null, $query = null, $id_galpon = null)
     {
-        $where = $id_galpon ? "id_galpon='" + $id_galpon + "'" : NULL;
+        $where = $id_galpon ? "id_galpon='" . $id_galpon . "'" : NULL;
         if ($consulta)
         {
             $where = $where ? $where . ' and ' : '';
             $where.=$this->dateWhere($consulta, $query);
         }
-        $consumo_medicinas->Select(['medicinas.descripcion', 'medicinas.tipo', 'consumo_medicinas.*'], $where, ['>medicinas' => 'id_medicina']);
+        $consumo_medicinas->Select(['medicinas.descripcion', 'medicinas.tipo', 'consumo_medicinas.*', 'galpones.nombre'], $where, ['>medicinas' => 'id_medicina', '>galpones' => 'id_galpon']);
         $res['consumos'] = $consumo_medicinas->FetchAll();
+        //$res['sql'] = $consumo_medicinas->sql;
     }
 
     public function resumen(SelectorControllers $c)

@@ -5,7 +5,7 @@
     </section>
     <section class="login-content">
         <div class="logo">
-            <h1 class="text-center">{{ settings.nombre | uppercase }}</h1>
+            <h1 class="text-center">{{ nombre | uppercase}}</h1>
         </div>
 
         <router-view ></router-view>
@@ -34,6 +34,12 @@
             settings()
             {
                 return this.$store.getters.settings;
+            },
+            nombre()
+            {
+               
+                    return this.$store.getters.settings.nombre;
+                
             }
         },
         filters: 
@@ -47,6 +53,6 @@
     }
 </script>
 
-<style>
-    
+<style scope>
+   
 </style>

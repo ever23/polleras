@@ -17,6 +17,7 @@ class GalponesForm extends Form
     {
         $this->text('nombre')->Validator("required")->MensajeError("Descripcion  no valida");
         $this->text('capacidad')->Validator("required|numeric")->MensajeError("Capacidad  no valida");
+        $this->text('consumo')->Validator("required|numeric")->MensajeError("Consumo no valido");
     }
 
     /**

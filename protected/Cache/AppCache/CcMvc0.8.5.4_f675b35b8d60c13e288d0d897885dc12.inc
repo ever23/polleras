@@ -2,7 +2,7 @@
  /**
  * Cache 
  * name: /polleras/api/settings/settings
- * Expire: 2018-12-03 22:34:32
+ * Expire: 2018-12-11 17:51:05
 */
 return array (
   0 => 
@@ -16,5 +16,5 @@ return array (
       'extencion' => NULL,
     ),
   ),
-  1 => 1543892672,
+  1 => 1544547065,
 );?>

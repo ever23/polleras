@@ -1,6 +1,6 @@
 <template>
      <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="#">{{ nombre }}</a>
+    <header class="app-header"><a class="app-header__logo" href="#">{{ User.nombres }}</a>
       <!-- Sidebar toggle button-->
         <a class="app-sidebar__toggle" href="#" @click.prevent="sidebar" aria-label="Hide Sidebar"></a>
       <!-- Navbar Right Menu-->
@@ -17,8 +17,12 @@
            <i :class="['fa', RelogArena]"></i>
           <i class=" datetime"  >{{ datetime }}</i>
         </li>
-         <li > <a class="app-nav__item" href="#" @click.prevent="recargar" >
+       
+         <li > <a class="app-nav__item" href="#" @click.prevent="recargar" title="Recargar">
           <i class="fa fa-refresh fa-lg"></i></a>
+        </li>
+         <li > <a class="app-nav__item" href="#" @click.prevent="retroceder" title="Retroceder" >
+          <i class="fa fa-rotate-left fa-lg"></i></a>
         </li>
            <li >
           <dropdown-notificaciones></dropdown-notificaciones>

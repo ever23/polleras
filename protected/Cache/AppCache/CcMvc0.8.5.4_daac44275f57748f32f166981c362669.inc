@@ -2,7 +2,7 @@
  /**
  * Cache 
  * name: /polleras/api/galpones/insertar
- * Expire: 2018-12-04 01:51:35
+ * Expire: 2018-12-13 00:40:08
 */
 return array (
   0 => 
@@ -16,5 +16,5 @@ return array (
       'extencion' => NULL,
     ),
   ),
-  1 => 1543904495,
+  1 => 1544658008,
 );?>

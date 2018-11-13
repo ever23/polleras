@@ -65,11 +65,19 @@ class Calimentos extends CostumController implements AccessUserController
             }
 
             $c->index();
-            var_dump((float) $res['alimentos'], (float) $form['cantidad']);
+            ///  var_dump((float) $res['alimentos'], (float) $form['cantidad']);
             if ((float) $res['alimentos'] < (float) $form['cantidad'])
             {
                 $res['insert'] = false;
-                $res['error'] = 'la cantidad supera la existencia';
+                $res['error'] = ['cantidad' => 'La cantidad supera la existencia'];
+                return;
+            }
+            $c->CreateController('galpones');
+            $c->index();
+            if ($res['galpones'][0]['consumo_dia'] + $form['cantidad'] > $res['galpones'][0]['consumo'] * $res['galpones'][0]['aves'])
+            {
+                $res['insert'] = false;
+                $res['error'] = ['cantidad' => 'La cantidad supera el consumo diario de las aves de este galpon '];
                 return;
             }
 
@@ -144,6 +152,17 @@ class Calimentos extends CostumController implements AccessUserController
             $sum+=$row['cantidad'];
             $count++;
         }
+        $s->CreateController('galpones');
+        $s->index();
+        $posible_consumo_dia = 0;
+        foreach ($res['galpones'] as $row)
+        {
+            $posible_consumo_dia+=($row['aves'] * ($row['consumo']));
+            //var_dump($row['consumo_dia']);
+        }
+        $res['consumo_mes'] = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y')) * $posible_consumo_dia;
+        unset($res['galpones']);
+
         $res['media_consumo'] = $count == 0 ? 0 : $sum / $count;
     }
 

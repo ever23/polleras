@@ -30,15 +30,16 @@ class CostumController extends Controllers
 
     protected function TingerNotificacion($tinger, $descripcion, $href, $icon, $type, $recurrencia = '1 day')
     {
+        $user = Mvc::App()->Session['id_usuarios'];
         $notificaciones = Mvc::App()->DataBase()->Tab('notificaciones');
         $time = new \DateTime("now", new \DateTimeZone('America/Caracas'));
         $time2 = new \DateTime("now", new \DateTimeZone('America/Caracas'));
         $time2->modify("-" . $recurrencia);
-        $notificaciones->Select("cod_tinger='" . $tinger . "'");
+        $notificaciones->Select("cod_tinger='" . $tinger . "' and id_usuarios='" . $user . "'");
         $n = $notificaciones->fetch();
         if ($notificaciones->num_rows == 0)
         {
-            $notificaciones->Insert(null, $descripcion, $href, $icon, $time->format('Y-m-d H:i:s'), $type, false, $tinger);
+            $notificaciones->Insert(null, $descripcion, $href, $icon, $time->format('Y-m-d H:i:s'), $type, false, $tinger, $user);
         } elseif ((new \DateTime($n->fech_notificacion)) < $time2 || $descripcion != $n->desc_notificacion || $type != $n->tipo_notificacion)
         {
             //var_dump((new \DateTime($n->fech_notificacion))->format('Y-m-d H:i:s'), $time2->format('Y-m-d H:i:s'));

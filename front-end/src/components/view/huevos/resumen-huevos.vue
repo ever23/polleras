@@ -8,7 +8,7 @@
     <div><h3>Galpon {{ galpon.nombre  }}</h3></div>
     <div class="btn-group">
 
-      <router-link class="btn btn-success btn-sm" :to="{name:'agregar-huevos',params:{idgalpon:id_galpon}}" title="Produccion de huevos"><i class="fa fa-building"></i></router-link>
+      <router-link class="btn btn-success btn-sm" v-if="galpon.aves>0"  :to="{name:'agregar-huevos',params:{idgalpon:id_galpon}}" title="Produccion de huevos"><i class="fa fa-building"></i></router-link>
       
     </div> 
   </div>
@@ -89,17 +89,7 @@
                 galpon:{}
             }
         },
-        updated()
-        {
-          $(document).ready(e=>
-            {
-               $('#compras_alimentos').DataTable();
-             $('#consumos_alimentos').DataTable();
-             
-            });
-          
-          
-        },
+       
          watch:
         {
           id_galpon()
@@ -144,6 +134,7 @@
                     this.produccion=request.data.produccion;
                     
                     this.estadisticas={
+                       ventas:request.data.ventas,
                       produccion:request.data.produccion,
                       huevos_grandes:request.data.huevos_grandes,
                       huevos_pequenos:request.data.huevos_pequenos,

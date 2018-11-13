@@ -1,6 +1,17 @@
 <template>
 <main class="app-content">
-   <app-title title="Inicio" icon="line-chart"/>
+  <div class="app-title">
+    <div>
+      <h1><i :class="['fa','fa-line-chart']"></i>  Sistema de Control Estadístico de Producción Avicola </h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+      <li class="breadcrumb-item">
+        <router-link :to="{name:'inicio'}"><i class="fa fa-home fa-lg"></i></router-link>
+      </li>
+    </ul>
+  </div>  
+
+   
    <div class="row" v-if="isRoot">
         <div class="col-md-6">
           <div class="widget-small primary coloured-icon"><i class="icon fa fa-user fa-3x"></i>
@@ -32,7 +43,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="widget-small info coloured-icon"><i class="icon fa  fa-twitter fa-3x"></i>
+          <div class="widget-small warning coloured-icon"><i class="icon fa  fa-twitter fa-3x"></i>
             <div class="info">
               <h4>Aves</h4>
               <p><b>{{ aves }}</b></p>
@@ -40,7 +51,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="widget-small info coloured-icon"><i class="icon fa  fa-circle fa-3x"></i>
+          <div class="widget-small danger coloured-icon"><i class="icon fa  fa-circle fa-3x"></i>
             <div class="info">
               <h4 class="">Huevos</h4>
               <p><b>{{ huevos }}</b></p>
@@ -50,7 +61,7 @@
         
       </div> 
       <div class="row">
-        <div class="col-md-8 offset-md-2">
+        <div class="col-lg-8 col-md-8  offset-md-2">
           <div class="tile">
             <h3 class="tile-title">Ganancias</h3>
             <div class="embed-responsive embed-responsive-16by9">
@@ -59,8 +70,7 @@
           </div>
         </div>
         
-        </div>
-      <div class="row">
+       
         <div class="col-md-6">
           <div class="tile">
             <h3 class="tile-title">Gastos</h3>

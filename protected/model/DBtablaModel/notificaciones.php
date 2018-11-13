@@ -37,6 +37,9 @@ class  notificaciones extends TablaModel
         $this->Colum('tipo_notificacion')->ENUM('success','info','warning','danger');
         $this->Colum('visto')->TINYINT(1)->DefaultValue('0');
         $this->Colum('cod_tinger')->VARCHAR(45);
+        $this->Colum('id_usuarios')->INT(11)->NotNull();
+        // Claves foraneas de la tabla 
+        $this->ForeingKey('id_usuarios')->References('usuarios','id_usuarios');
     }
 
     /**

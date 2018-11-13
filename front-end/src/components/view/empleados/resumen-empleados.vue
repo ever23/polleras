@@ -60,7 +60,7 @@
            <list-asistencia :asistencia="asistencia" @change="load(null)"></list-asistencia>
               </div>
               <div class="tile" v-if="resumen('reporte')" >
-              <select class="form-control" v-model="selectpdf">
+              <select class="form-control" v-model="selectpdf" name="selectpdf">
                 <option value="/polleras/api/empleados/nominapdf?"><i class="fa fa-users"></i> Nomina</option>
                 <option value="/polleras/api/empleados/pagospdf?"><i class="fa fa-dollar"></i> Pagos</option>
                 <option value="/polleras/api/empleados/asistenciapdf?"><i class="fa fa-check"></i>  Asistencia</option>
@@ -111,17 +111,7 @@
                
             }
         },
-        updated()
-        {
-          $(document).ready(e=>
-          {
-            $('#compras_alimentos').DataTable();
-            $('#consumos_alimentos').DataTable();
-            
-          });
-          
-          
-        },
+        
         created()
         {
             this.load();

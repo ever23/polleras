@@ -16,7 +16,7 @@ class EmpleadosForm extends Form
     protected function Campos()
     {
 
-        $this->text('ci_empleado')->Validator("required|maxlength:8")->MensajeError("Cedula no valida");
+        $this->text('ci_empleado')->Validator("required|maxlength:8|numeric")->MensajeError("Cedula no valida");
         $this->text('nombres')->Validator("required")->MensajeError("Nombres no validos");
         $this->text('apellidos')->Validator('required')->MensajeError("Apellidos no validos");
         $this->text('sueldo')->Validator('required|numeric')->MensajeError("Sueldo no valido");
@@ -45,7 +45,7 @@ class PagoNominaForm extends Form
     protected function Campos()
     {
 
-        $this->text('pago')->Validator("required")->MensajeError("Pago no valido");
+        $this->text('pago')->Validator("required|numeric")->MensajeError("Pago no valido");
         $this->date('ci_empleado')->Validator('required')->MensajeError("Cedula no valida");
         $this->date('fecha')->Validator('required')->MensajeError("Fecha no valida");
     }

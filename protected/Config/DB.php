@@ -2,7 +2,7 @@
 
 return [
     'class' => '\\Cc\\Mvc\\PDO',
-    'param' => ['mysql:host=localhost;dbname=pollera;charset=utf8', 'root', 'ever2310']
+    'param' => ['mysql:host=localhost;dbname=pollera;charset=utf8', 'root', '']
 ];
 /** Sqlite con PDO
  * return [

@@ -12,8 +12,8 @@
     <div class="btn-group">
 
       <router-link class="btn btn-success btn-sm" :to="{name:'agregar-aves',params:{idgalpon:id_galpon}}" title="Agregar aves"><i class="fa fa-plus-square"></i></router-link>
-      <router-link class="btn btn-info btn-sm" :to="{name:'venta-aves',params:{idgalpon:id_galpon}}" title="Venta de aves"><i class="fa fa-dollar"></i></router-link>
-       <router-link class="btn btn-danger btn-sm" :to="{name:'mortalidad-aves',params:{idgalpon:id_galpon}}" title="Muerte de aves"><i class="fa fa-remove"></i></router-link>
+      <router-link class="btn btn-info btn-sm" v-if="galpon.aves>0"  :to="{name:'venta-aves',params:{idgalpon:id_galpon}}" title="Venta de aves"><i class="fa fa-dollar"></i></router-link>
+       <router-link class="btn btn-danger btn-sm" v-if="galpon.aves>0"  :to="{name:'mortalidad-aves',params:{idgalpon:id_galpon}}" title="Muerte de aves"><i class="fa fa-remove"></i></router-link>
     </div> 
   </div>
   </div>
@@ -110,25 +110,13 @@
                 galpon:{}
             }
         },
-        updated()
-        {
-          $(document).ready(e=>{
-            $('#compras').DataTable();
-            $('#ventas').DataTable();
-            $('#muertes').DataTable();
-            
-          });
-            
-        },
+      
         created()
         {
 
             this.load();
         },
-        computed:
-        {
-          
-        },
+       
         methods:
         {
           change_meta(meta)

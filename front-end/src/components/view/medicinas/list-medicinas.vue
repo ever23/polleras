@@ -1,7 +1,7 @@
 <template>
 
  <div  >
-            <table class="table table-hover table-bordered" id="list_medicinas">
+            <table class="table  table-hover table-bordered" ref="tabla">
              <thead >
                  <tr >
                     <td>
@@ -20,7 +20,7 @@
                 </tr> 
              </thead>
                 <tbody>
-               <tr v-for="item in medicinas" > 
+                <tr v-for="item in medicinas" ref="items"> 
                     <td>
                             {{ item.descripcion}}
                     </td>
@@ -41,7 +41,7 @@
                     <router-link :to="{name:'compra-medicinas',params:{id_medicina:item.id_medicina}}" class="btn btn-primary btn-sm" title="Registrar compra">
                       <i class="fa fa-cart-plus"></i>
                     </router-link>
-                    <router-link :to="{name:'consumo-medicinas',params:{id_medicina:item.id_medicina}}" class="btn btn-primary btn-sm" title="Registrar Consumo">
+                    <router-link v-if="!galpon.id_galpon ||  galpon.aves>0"  :to="{name:'consumo-medicinas',params:{id_medicina:item.id_medicina}}" class="btn btn-primary btn-sm" title="Registrar Consumo">
                       <i class="fa fa-shopping-basket"></i>
                     </router-link>
                     
@@ -56,24 +56,21 @@
 
 <script>
     import axios from 'axios'
+    import DataTable from '../../../assets/js/list-DataTable.js'
     export default 
     {
+        mixins: [DataTable],
         name:'list-medicinas',
-        props:['medicinas'],
+        props:['medicinas','galpon'],
         data () {
             return {
                
             }
         },
-        created()
-        {
-          
-            
-        },
-        updated()
-        {
-           
-        },
+       created()
+       {
+        //console.log(this.galpon)
+       },
         computed:
         {
           isRoot()

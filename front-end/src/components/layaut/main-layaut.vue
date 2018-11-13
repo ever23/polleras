@@ -12,7 +12,7 @@
 </template>
 
 <script>
-   
+   import notify from '../../assets/js/notify.js'
     export default {
         name:'main-layaut',
         
@@ -35,24 +35,7 @@
         { 
           setInterval(()=>this.time_online++,1000);
         },
-        mounted()
-        {
-        //console.log('mounted '+(new Date()));
-          //this.$store.commit('loaing',false);
-         /*$(document).ready(function () 
-          {
-          //  $(document).
-              //Activate bootstrip tooltips
-             // $("[data-toggle='tooltip']").tooltip();
-
-          })*/
-          
-        },
-        updated()
-        {
-          //console.log('updated '+(new Date()));
-          //this.$store.commit('loaing',false);
-        },
+       
        
         watch: 
         {
@@ -60,13 +43,13 @@
           {
             if(this.time_online==240)
             {
-              setTimeout(()=>new Audio('/polleras/static/audio/beep.mp3').play(), 0);
-              $.notify({title: "Alerta de inactividad: ",message: "<br>En 1 min sera bloqueada la sesion por inactividad",icon: 'fa fa-warning'},{type: "warning"});
+            //  setTimeout(()=>new Audio('/polleras/static/audio/beep.mp3').play(), 0);
+              notify({title: "Alerta de inactividad: ",message: "<br>En 1 min sera bloqueada la sesion por inactividad",icon: 'fa fa-warning'},{type: "warning"});
             }
             if(this.time_online==270)
             {
-              setTimeout(()=>new Audio('/polleras/static/audio/beep.mp3').play(), 0);
-              $.notify({title: "Alerta de inactividad: ",message: "<br>En 30 segundos sera bloqueada la sesion por inactividad",icon: 'fa fa-warning'},{type: "danger"});
+             // setTimeout(()=>new Audio('/polleras/static/audio/beep.mp3').play(), 0);
+              notify({title: "Alerta de inactividad: ",message: "<br>En 30 segundos sera bloqueada la sesion por inactividad",icon: 'fa fa-warning'},{type: "danger"});
             }
             if(this.time_online==300)
             {

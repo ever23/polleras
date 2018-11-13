@@ -96,7 +96,9 @@ class Chuevos extends CostumController implements AccessUserController
         $pdf->ln();
         $tablapdf = new TablePdfIterator(5, [90, 90, 90], 'arial', 12);
 
-        $tablapdf->AddCollHead('detalles', 'DETALLES', 110, 'j');
+        $tablapdf->AddCollHead('detalles', 'DETALLES', 80, 'j');
+        $tablapdf->AddCollHead('nombre', 'GALPON', 30, 'j');
+
         $tablapdf->AddCollHead('tipo', 'TIPO', 30, 'j');
         $tablapdf->AddCollHead('cantidad', 'CANTIDAD', 25, 'C');
         $tablapdf->AddCollHead('fecha', 'FECHA', 25, 'C');

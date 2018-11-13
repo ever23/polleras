@@ -7,26 +7,30 @@
 	          <div class="tile">
 	            <h3 class="tile-title">Compra de aves</h3>
 	            <div class="tile-body">
-	              <form @submit.prevent="Enviar">
+	              <formulario :error="errores"  @submit.prevent="Enviar">
 	              <div class="form-group">
 	               	<select-galpon @change="galpon" :id_galpon="idgalpon"></select-galpon>
 	               </div>
 	                <div class="form-group">
 	                  <label class="control-label">Cantidad </label>
-	                  <input class="form-control" v-model="aves.cantidad" required type="text" placeholder="Cantidad">
+	                  <div class="btn-group form-control form-group cantidad-max">
+	                  <input class="form-control" v-model="aves.cantidad" name="cantidad" required type="text" placeholder="Cantidad">
+	                   <button class="btn btn-primary btn-sm" @click.prevent="aves.cantidad=max_cantidad">Max</button>
+	                   </div>
+	                
 	                </div>
 	                 <div class="form-group">
 	                  <label class="control-label">Costo por unidad </label>
-	                  <input class="form-control" v-model="aves.costo" required type="text" :placeholder="'Costo '+settings.moneda">
+	                  <input class="form-control" v-model="aves.costo" name="costo" required type="text" :placeholder="'Costo '+settings.moneda">
 	                </div>
 	                <div class="form-group">
 	                  <label class="control-label">fecha</label>
-	                  <input class="form-control" v-model="aves.fecha" required type="date" placeholder="fecha">
+	                  <input class="form-control" v-model="aves.fecha" name="fecha" required type="date" placeholder="fecha">
 	                </div>
 	               
 	                <div class="form-group" >
 	                  <label class="control-label">Detalles</label>
-	                  <textarea class="form-control" v-model="aves.detalles" required placeholder="Detalles"></textarea>
+	                  <textarea class="form-control" v-model="aves.detalles" name="detalles" required placeholder="Detalles"></textarea>
 	                  
 	                </div>
 	               
@@ -34,7 +38,7 @@
 	              <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Guardar</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-secondary" type="button" @click.prevent="Cancelar"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancelar</button>
 	            
 	                </div>
-	              </form>
+	              </formulario>
 	            </div>
 	            
 	          </div>
@@ -59,6 +63,7 @@ import select_galpon from '../galpones/select-galpon.vue'
 		{
 			
 			return {
+				max_cantidad:null,
 				aves:
 				{
 					id_galpon:null,
@@ -69,6 +74,7 @@ import select_galpon from '../galpones/select-galpon.vue'
 					detalles:null,
 					Submited:1
 				},
+				errores:{}
 			
 			
 
@@ -88,8 +94,10 @@ import select_galpon from '../galpones/select-galpon.vue'
 		},
 		methods:
 		{
-			galpon(id_galpon)
+			galpon(id_galpon,galpon)
 			{
+				this.max_cantidad=galpon.capacidad-galpon.aves;
+				//console.log(this.max_cantidad)
 				this.aves.id_galpon=id_galpon;
 			},
 			Cancelar()
@@ -118,7 +126,7 @@ import select_galpon from '../galpones/select-galpon.vue'
                              
                     }else
                     {
-                        AxiosCatch(request.data.error);
+                       this.errores=request.data.error;
                     }  
                 }).catch(AxiosCatch);
 			}
