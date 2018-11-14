@@ -54,5 +54,9 @@
 </script>
 
 <style scope>
-   
+   .logo
+   {
+    margin-right: 20px;
+    margin-right: 20px;
+   }
 </style>
