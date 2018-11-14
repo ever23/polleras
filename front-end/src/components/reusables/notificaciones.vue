@@ -35,6 +35,8 @@
 </template>
 <script >
 import axios from 'axios'
+var CancelToken = axios.CancelToken;
+var source = CancelToken.source();
 import notify from '../../assets/js/notify.js'
 
 const TIME_NOTIFICACION=20000;
@@ -154,16 +156,17 @@ const TIME_NOTIFICACION=20000;
             {
               data='?fech_notificacion='+this.notificaciones[0].fech_notificacion;
             }
-            axios.get('/polleras/api/notificaciones/now'+data)
+            if(this.$store.getters.User.permisos!==null)
+            axios.get('/polleras/api/notificaciones/now'+data,{cancelToken: source.token})
             .then(request=>
             {
               this.updateNotification(request.data);
-              if(this.$store.getters.User.permisos!==null)
+              
               setTimeout(()=>this.loadnotifications(),TIME_NOTIFICACION);
             }).catch(d=>
             {
               AxiosCatch(d);
-              if(this.$store.getters.User.permisos!==null)
+              //if(this.$store.getters.User.permisos!==null)
               setTimeout(()=>this.loadnotifications(),TIME_NOTIFICACION);
             });
           },

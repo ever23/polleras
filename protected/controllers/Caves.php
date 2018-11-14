@@ -172,7 +172,7 @@ class Caves extends CostumController implements AccessUserController
             if ($galpones->fetch()->capacidad < ($res['aves'] + $form->cantidad))
             {
                 $res['insert'] = false;
-                $res['error'] = "La cantidad supera la capacidad del galpon ";
+                $res['error'] = ["cantidad" => "La cantidad supera la capacidad del galpon"];
                 return;
             }
 
@@ -208,7 +208,7 @@ class Caves extends CostumController implements AccessUserController
             if ($res['aves'] < $form['cantidad'])
             {
                 $res['insert'] = false;
-                $res['error'] = 'la cantidad supera la existencia';
+                $res['error'] = ['cantidad' => 'la cantidad supera la existencia'];
                 return;
             }
             if ($mortalidad->Insert($form))
@@ -244,7 +244,7 @@ class Caves extends CostumController implements AccessUserController
             if ($res['aves'] < $form['cantidad'])
             {
                 $res['insert'] = false;
-                $res['error'] = 'la cantidad supera la existencia';
+                $res['error'] = ['cantidad' => 'la cantidad supera la existencia'];
                 return;
             }
             if ($venta_aves->Insert($form))

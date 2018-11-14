@@ -113,7 +113,10 @@
                 ventas:[],
                 gastos:[],
                 ganancias:[],
-                ejectado:false
+                ejectado:false,
+                Cganancias:null,
+                Cgastos:null,
+                Cventas:null
             }
         },
       
@@ -157,8 +160,13 @@
         methods: {
             ejecutar()
             { 
-              
-                var ganancias = new Chart(this.$refs.ganancias.getContext("2d")).Line({
+              if(this.Cgastos)
+              {
+                this.Cgastos.destroy();
+                this.Cventas.destroy();
+                this.Cganancias.destroy();
+              }
+                 this.Cganancias = new Chart(this.$refs.ganancias.getContext("2d")).Line({
                       labels: meses,
                       datasets: [
                         {
@@ -174,7 +182,7 @@
                       ]
                     });
                 
-                var Ccompras = new Chart(this.$refs.gastos.getContext("2d")).Bar({
+                this.Cgastos = new Chart(this.$refs.gastos.getContext("2d")).Bar({
                       labels: meses,
                       datasets: [
                         {
@@ -189,7 +197,7 @@
                         }
                       ]
                     });
-                var Cventas= new Chart(this.$refs.ventas.getContext("2d")).Bar({
+                 this.Cventas= new Chart(this.$refs.ventas.getContext("2d")).Bar({
                       labels: meses,
                       datasets: [
                         {

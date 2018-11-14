@@ -177,7 +177,7 @@ class Chuevos extends CostumController implements AccessUserController
             if (($form['tipo'] == 'grande' && $res['huevos_grandes'] < $form['cantidad']) || ($form['tipo'] == 'pequeño' && $res['huevos_pequenos'] < $form['cantidad']))
             {
                 $res['insert'] = false;
-                $res['error'] = 'la cantidad supera la existencia';
+                $res['error'] = ['cantidad' => 'la cantidad supera la existencia'];
                 return;
             }
             if ($venta_huevos->Insert($form))

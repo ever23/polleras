@@ -76,7 +76,8 @@
 
 <script>
     import axios from 'axios'
-  
+  var CancelToken = axios.CancelToken;
+var source = CancelToken.source();
    import {fechaHora} from '../../assets/js/Date.js'
     export default {
         name:'header-menu',
@@ -153,6 +154,7 @@
             {
               if (isConfirm) 
               {
+                source.cancel()
                 this.$store.dispatch('LogOut').then(data=>
                   {
                     this.$router.push({name:'login'});
