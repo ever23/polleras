@@ -30,13 +30,13 @@ class  notificaciones extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_notificacion')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('desc_notificacion')->VARCHAR(250);
-        $this->Colum('href_notificacion')->VARCHAR(250);
-        $this->Colum('icon_notification')->VARCHAR(45);
-        $this->Colum('fech_notificacion')->DATETIME();
-        $this->Colum('tipo_notificacion')->ENUM('success','info','warning','danger');
-        $this->Colum('visto')->TINYINT(1)->DefaultValue('0');
-        $this->Colum('cod_tinger')->VARCHAR(45);
+        $this->Colum('desc_notificacion')->VARCHAR(250)->NotNull();
+        $this->Colum('href_notificacion')->VARCHAR(250)->NotNull();
+        $this->Colum('icon_notification')->VARCHAR(45)->NotNull();
+        $this->Colum('fech_notificacion')->DATETIME()->NotNull();
+        $this->Colum('tipo_notificacion')->ENUM('success','info','warning','danger')->NotNull();
+        $this->Colum('visto')->TINYINT(1)->NotNull();
+        $this->Colum('cod_tinger')->VARCHAR(45)->NotNull();
         $this->Colum('id_usuarios')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_usuarios')->References('usuarios','id_usuarios');

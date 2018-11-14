@@ -30,10 +30,10 @@ class  empleados extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('ci_empleado')->VARCHAR(60)->PrimaryKey()->NotNull();
-        $this->Colum('nombres')->VARCHAR(100);
-        $this->Colum('apellidos')->VARCHAR(100);
-        $this->Colum('sueldo')->FLOAT(10,2);
-        $this->Colum('cargo')->VARCHAR(45);
+        $this->Colum('nombres')->VARCHAR(100)->NotNull();
+        $this->Colum('apellidos')->VARCHAR(100)->NotNull();
+        $this->Colum('sueldo')->FLOAT(10,2)->NotNull();
+        $this->Colum('cargo')->VARCHAR(45)->NotNull();
     }
 
     /**

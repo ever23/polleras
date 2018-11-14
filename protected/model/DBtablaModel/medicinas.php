@@ -30,8 +30,8 @@ class  medicinas extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_medicina')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('descripcion')->VARCHAR(400);
-        $this->Colum('tipo')->VARCHAR(45);
+        $this->Colum('descripcion')->VARCHAR(400)->NotNull();
+        $this->Colum('tipo')->VARCHAR(45)->NotNull();
     }
 
     /**

@@ -30,10 +30,10 @@ class  compra_aves extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_compra')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('cantidad')->FLOAT(10,2);
-        $this->Colum('fecha')->DATE();
-        $this->Colum('costo')->FLOAT(10,2);
-        $this->Colum('detalles')->TEXT();
+        $this->Colum('cantidad')->FLOAT(10,2)->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
+        $this->Colum('costo')->FLOAT(10,2)->NotNull();
+        $this->Colum('detalles')->TEXT()->NotNull();
         $this->Colum('id_galpon')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_galpon')->References('galpones','id_galpon');

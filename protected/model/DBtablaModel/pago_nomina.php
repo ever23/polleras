@@ -30,9 +30,9 @@ class  pago_nomina extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_nomina')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('pago')->FLOAT(10,2);
-        $this->Colum('ci_empleado')->VARCHAR(60);
-        $this->Colum('fecha')->DATE();
+        $this->Colum('pago')->FLOAT(10,2)->NotNull();
+        $this->Colum('ci_empleado')->VARCHAR(60)->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('ci_empleado')->References('empleados','ci_empleado');
     }

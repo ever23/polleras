@@ -29,12 +29,12 @@ class  usuarios extends TablaModel
     public function Create()
     {
         // Columnas de la tabla 
-        $this->Colum('id_usuarios')->INT(11)->PrimaryKey()->autoincrement()->DefaultValue('');
-        $this->Colum('user')->VARCHAR(45)->DefaultValue('');
-        $this->Colum('hash')->VARCHAR(255)->DefaultValue('');
-        $this->Colum('permisos')->ENUM('root','admin')->DefaultValue('');
-        $this->Colum('nombres')->VARCHAR(100)->DefaultValue('');
-        $this->Colum('apellidos')->VARCHAR(100)->DefaultValue('');
+        $this->Colum('id_usuarios')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
+        $this->Colum('user')->VARCHAR(45)->NotNull();
+        $this->Colum('hash')->VARCHAR(255)->NotNull();
+        $this->Colum('permisos')->ENUM('root','admin')->NotNull();
+        $this->Colum('nombres')->VARCHAR(100)->NotNull();
+        $this->Colum('apellidos')->VARCHAR(100)->NotNull();
     }
 
     /**

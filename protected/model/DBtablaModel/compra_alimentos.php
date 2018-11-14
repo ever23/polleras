@@ -30,10 +30,10 @@ class  compra_alimentos extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_comp')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('detalles')->TEXT();
-        $this->Colum('cantidad')->FLOAT(10,2);
-        $this->Colum('costo')->FLOAT(10,2);
-        $this->Colum('fecha')->DATE();
+        $this->Colum('detalles')->TEXT()->NotNull();
+        $this->Colum('cantidad')->FLOAT(10,2)->NotNull();
+        $this->Colum('costo')->FLOAT(10,2)->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
     }
 
     /**

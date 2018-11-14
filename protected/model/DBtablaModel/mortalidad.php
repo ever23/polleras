@@ -30,9 +30,9 @@ class  mortalidad extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_mortalidad')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('cantidad')->INT(11);
-        $this->Colum('rason')->VARCHAR(400);
-        $this->Colum('fecha')->DATE();
+        $this->Colum('cantidad')->INT(11)->NotNull();
+        $this->Colum('rason')->VARCHAR(400)->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
         $this->Colum('id_galpon')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_galpon')->References('galpones','id_galpon');

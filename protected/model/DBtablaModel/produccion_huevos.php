@@ -30,10 +30,10 @@ class  produccion_huevos extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_produccion')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('cantidad')->INT(11);
-        $this->Colum('fecha')->DATE();
-        $this->Colum('detalles')->VARCHAR(300);
-        $this->Colum('tipo')->ENUM('grande','pequeño');
+        $this->Colum('cantidad')->INT(11)->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
+        $this->Colum('detalles')->VARCHAR(300)->NotNull();
+        $this->Colum('tipo')->ENUM('grande','pequeño')->NotNull();
         $this->Colum('id_galpon')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_galpon')->References('galpones','id_galpon');

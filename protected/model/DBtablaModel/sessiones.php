@@ -30,7 +30,7 @@ class  sessiones extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_session')->VARCHAR(50)->PrimaryKey()->NotNull();
-        $this->Colum('fecha')->DATETIME();
+        $this->Colum('fecha')->DATETIME()->NotNull();
         $this->Colum('id_usuarios')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_usuarios')->References('usuarios','id_usuarios');

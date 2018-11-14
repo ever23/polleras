@@ -31,9 +31,9 @@ class  compra_medicinas extends TablaModel
         // Columnas de la tabla 
         $this->Colum('id_compra')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
         $this->Colum('id_medicina')->INT(11)->NotNull();
-        $this->Colum('fecha')->DATE();
-        $this->Colum('cantidad')->INT(11);
-        $this->Colum('costo')->FLOAT(10,2);
+        $this->Colum('fecha')->DATE()->NotNull();
+        $this->Colum('cantidad')->INT(11)->NotNull();
+        $this->Colum('costo')->FLOAT(10,2)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_medicina')->References('medicinas','id_medicina');
     }

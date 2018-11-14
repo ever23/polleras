@@ -30,8 +30,8 @@ class  asistencia extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_asistencia')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('fecha')->DATETIME();
-        $this->Colum('ci_empleado')->VARCHAR(60);
+        $this->Colum('fecha')->DATETIME()->NotNull();
+        $this->Colum('ci_empleado')->VARCHAR(60)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('ci_empleado')->References('empleados','ci_empleado');
     }

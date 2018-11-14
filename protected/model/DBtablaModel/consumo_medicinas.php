@@ -31,9 +31,9 @@ class  consumo_medicinas extends TablaModel
         // Columnas de la tabla 
         $this->Colum('id_consumo')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
         $this->Colum('id_medicina')->INT(11)->NotNull();
-        $this->Colum('detalles')->TEXT();
-        $this->Colum('fecha')->DATE();
-        $this->Colum('cantidad')->FLOAT(10,2);
+        $this->Colum('detalles')->TEXT()->NotNull();
+        $this->Colum('fecha')->DATE()->NotNull();
+        $this->Colum('cantidad')->FLOAT(10,2)->NotNull();
         $this->Colum('id_galpon')->INT(11)->PrimaryKey()->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_galpon')->References('galpones','id_galpon');

@@ -30,8 +30,8 @@ class  consumo_alimentos extends TablaModel
     {
         // Columnas de la tabla 
         $this->Colum('id_consumo')->INT(11)->PrimaryKey()->autoincrement()->NotNull();
-        $this->Colum('cantidad')->FLOAT(10,2);
-        $this->Colum('fecha')->DATETIME();
+        $this->Colum('cantidad')->FLOAT(10,2)->NotNull();
+        $this->Colum('fecha')->DATETIME()->NotNull();
         $this->Colum('id_galpon')->INT(11)->NotNull();
         // Claves foraneas de la tabla 
         $this->ForeingKey('id_galpon')->References('galpones','id_galpon');
