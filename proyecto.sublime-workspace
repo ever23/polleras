@@ -43,6 +43,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
+			"settings":
+			{
+				"buffer_size": 1241,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/estadisticas-alimentos.vue",
+			"settings":
+			{
+				"buffer_size": 5147,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.js",
+			"settings":
+			{
+				"buffer_size": 3402,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/vue-run-dev.sublime-build",
 	"command_palette":
@@ -75,15 +99,34 @@
 	},
 	"file_history":
 	[
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/notificaciones.vue",
+		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.web.config.js",
+		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/assets/js/notify.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/auth.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/auth.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/inicio/inicio.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/login-form.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/main/index.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/App.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
+		"/I/Programacion/php/polleras/protected/settings.json",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/formulario.vue",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/estadisticas-alimentos.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/localSettings.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/edit-api.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/settings.js",
+		"/I/Programacion/node.js/polleras-desktop/node_modules/electron/index.js",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/treeview-menu.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/index.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/layaut/login-layaut.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/edit-api.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/aves/mortalidad-aves.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/aside-menu.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/assets/js/delete.js",
 		"/C/xampp/php/php.ini",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/header-menu.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/notificaciones.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/agregar-alimentos.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/consumo-alimentos.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/resumen-alimentos.vue",
@@ -101,7 +144,6 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/huevos/agregar-huevos.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/huevos/resumen-huevos.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/huevos/venta-huevos.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/inicio/inicio.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/medicinas/agregar-medicinas.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/medicinas/compra-medicinas.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/medicinas/compras-medicinas.vue",
@@ -115,17 +157,12 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/settings/sessiones.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/settings/settings.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/settings/usuarios.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/auth.js",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/settings.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/polleras-desktop-app.json",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/localSettings.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/router/login.js",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/notificaciones.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/index.ejs",
 		"/I/Programacion/node.js/polleras-desktop/package.json",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/layaut/main-layaut.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/App.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/aside-menu.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/header-menu.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/view/settings/editar-usuario.vue",
@@ -134,12 +171,9 @@
 		"/I/Programacion/php/polleras/front-end/src/components/layaut/login-layaut.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/view/medicinas/agregar-medicinas.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/app-title.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/main/index.js",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/login-form.vue",
 		"/I/Programacion/php/polleras/front-end/src/assets/js/UserVueFilter.js",
 		"/I/Programacion/php/polleras/front-end/static/js/plugins/fullcalendar.min.js",
 		"/C/Program Files/Sublime_Text/Data/Packages/User/vue-run-dev.sublime-build",
-		"/C/xampp/apache/conf/httpd.conf",
 		"/C/xampp/apache/conf/extra/httpd-ssl.conf"
 	],
 	"find":
@@ -151,6 +185,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"I:\\Programacion\\node.js\\polleras-desktop\\src\\renderer\\components\\view",
 			"I:\\Programacion\\node.js\\polleras-desktop\\src\\renderer",
 			"I:\\Programacion\\node.js\\polleras-desktop\\src\\renderer\\store",
 			"I:\\Programacion\\node.js\\polleras-desktop\\src\\renderer\\components",
@@ -160,9 +195,16 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"listen",
+			"chart",
+			"isLoggedIn",
+			"logout",
+			"login",
+			"getIdToken",
+			"fs",
 			"-db",
 			"db",
 			"api",
@@ -207,8 +249,97 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1241,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/estadisticas-alimentos.vue",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5147,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3400,
+								3400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/vue.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1295,
+								1295
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
