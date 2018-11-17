@@ -66,6 +66,14 @@
 				"buffer_size": 3402,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "front-end/index.html",
+			"settings":
+			{
+				"buffer_size": 7904,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "Packages/User/vue-run-dev.sublime-build",
@@ -99,6 +107,7 @@
 	},
 	"file_history":
 	[
+		"/E/www/CcMvc/README.md",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/notificaciones.vue",
 		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.web.config.js",
 		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
@@ -249,7 +258,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -277,7 +286,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -307,7 +316,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -323,8 +332,8 @@
 						"selection":
 						[
 							[
-								1295,
-								1295
+								998,
+								998
 							]
 						],
 						"settings":
@@ -334,7 +343,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "front-end/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 7904,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7006,
+								7006
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3672.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
