@@ -58,7 +58,7 @@
                 <h4 class="tile-header">Muerte de Aves</h4>
         <list-mortalidad-aves :muertes="muertes" :id_galpon="id_galpon" @change="load"></list-mortalidad-aves>
               </div>
-            <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/aves/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+            <show-pdf v-if="resumen('reporte')" :src="src_reporte" ></show-pdf>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@
     import ventas from './list-ventas-aves.vue'
     import mortalidad from './list-mortalidad-aves.vue'
     import estadisticas from './estadisticas-aves.vue'
-
+    import path from 'path'
     export default 
     {
         name:'resumen-granja',
@@ -110,7 +110,13 @@
                 galpon:{}
             }
         },
-      
+       computed:
+        {
+          src_reporte()
+          {
+            return path.join(this.$store.getters.ApiServer,'/api/aves/reporte')+'?'+this.query+(this.id_galpon?'&id_galpon='+this.id_galpon:'')
+          }
+        },
         created()
         {
 

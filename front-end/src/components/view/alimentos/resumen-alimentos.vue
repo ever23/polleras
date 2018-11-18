@@ -48,7 +48,7 @@
                 <h4 class="tile-header">Consumos de Alimentos</h4>
            <list-consumos-alimentos :consumos="consumos" @change="load"/>
               </div>
-             <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/alimentos/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" />  
+             <show-pdf v-if="resumen('reporte')" :src="src_reporte" />  
           </div> 
         </div>
       </div>
@@ -61,6 +61,7 @@
    import listCompras from './list-compras-alimentos.vue'
    import listConsumos from './list-consumos-alimentos.vue'
   import estadisticas from './estadisticas-alimentos.vue'
+  import path from 'path'
     export default 
     {
         name:'resumen-alimentos',
@@ -107,7 +108,13 @@
           this.load();
             
         },
-       
+        computed:
+        {
+          src_reporte()
+          {
+            return path.join(this.$store.getters.ApiServer,'/api/alimentos/reporte')+'?'+this.query+(this.id_galpon?'&id_galpon='+this.id_galpon:'')
+          }
+        },
         methods:
         {
           change_meta(meta)

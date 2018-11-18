@@ -11,7 +11,9 @@
         <meta  name='revisit' content='3 days'>
 
         <meta  name='googlebot' content='index,follow,all'>
-        <% var appPublicPath="/polleras"  %>
+        <% 
+        var appPublicPath=require('./config/index.js').build.assetsPublicPath
+        %>
         <link  rel='shortcut icon' href='<%= appPublicPath %>/favicon.ico' media='monochrome'/>
         <title>Granjas Avicolas</title>
          <script>
@@ -19,7 +21,7 @@
         </script>
         <link rel="stylesheet" type="text/css" href="<%= appPublicPath %>/static/css/main.css"> 
         <link rel="stylesheet" type="text/css" href="<%= appPublicPath %>/static/font-awesome/css/font-awesome.min.css"> 
-        <style type="text/css">
+        <style type="text/css"> 
 
             .material-half-bg {
                 height: 100vh;

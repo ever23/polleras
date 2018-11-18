@@ -48,7 +48,7 @@
                 <h4 class="tile-header">Consumos de Medicinas</h4>
            <list-consumos-medicinas :consumos="consumos"  @change="load(null)"></list-consumos-medicinas>
               </div>
-              <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/medicinas/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+              <show-pdf v-if="resumen('reporte')" :src="src_reporte" ></show-pdf>
             
           </div>
         </div>
@@ -61,7 +61,7 @@
    import listCompras from './list-compras-medicinas.vue'
    import listConsumos from './list-consumos-medicinas.vue'
    import stock from './list-medicinas.vue'
-  
+   import path from 'path'
     export default 
     {
         name:'resumen-medicina',
@@ -104,9 +104,12 @@
             this.load();
           }
         },
-        computed:
+         computed:
         {
-         
+          src_reporte()
+          {
+            return path.join(this.$store.getters.ApiServer,'/api/medicinas/reporte')+'?'+this.query+(this.id_galpon?'&id_galpon='+this.id_galpon:'')
+          }
         },
         methods:
         {

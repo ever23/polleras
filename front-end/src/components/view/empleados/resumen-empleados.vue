@@ -61,9 +61,9 @@
               </div>
               <div class="tile" v-if="resumen('reporte')" >
               <select class="form-control" v-model="selectpdf" name="selectpdf">
-                <option value="$store.getters.ApiServer+'/api/empleados/nominapdf?"><i class="fa fa-users"></i> Nomina</option>
-                <option value="$store.getters.ApiServer+'/api/empleados/pagospdf?"><i class="fa fa-dollar"></i> Pagos</option>
-                <option value="$store.getters.ApiServer+'/api/empleados/asistenciapdf?"><i class="fa fa-check"></i>  Asistencia</option>
+                <option :value="src_reporte+'/nominapdf?'"><i class="fa fa-users"></i> Nomina</option>
+                <option :value="src_reporte+'/pagospdf?'"><i class="fa fa-dollar"></i> Pagos</option>
+                <option :value="src_reporte+'/asistenciapdf?'"><i class="fa fa-check"></i>  Asistencia</option>
               </select>
                 <show-pdf :src="selectpdf+query" ></show-pdf>
               </div>
@@ -79,6 +79,7 @@
    import Nomina from './list-nomina.vue'
    import Asistencia from './list-asistencia.vue'
    import Pagos from './list-pagos.vue'
+   import path from 'path'
     export default 
     {
         name:'resumen-empleados',
@@ -114,13 +115,16 @@
         
         created()
         {
-			this.selectpdf=this.$store.getters.ApiServer+'/api/empleados/nominapdf?';
+			     this.selectpdf=path.join(this.$store.getters.ApiServer,'/api/empleados')+'/nominapdf?';
             this.load();
             
         },
         computed:
         {
-         
+          src_reporte()
+          {
+            return path.join(this.$store.getters.ApiServer,'/api/empleados')
+          }
         },
         methods:
         {

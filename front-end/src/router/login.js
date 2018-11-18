@@ -4,9 +4,10 @@ import recuperapass from '../components/view/login/recupera-pass.vue'
 import Admin404 from '../components/view/login404.vue'
 import LockScreen from '../components/view/login/LockScreen.vue'
 import $store from '@/store'
+import path from 'path'
 export default
 {
-    path: $store.getters.ApiServer+'/login',
+    path: path.join($store.getters.ApiServer,'/login'),
     component:login,
     children:
     [

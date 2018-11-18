@@ -48,7 +48,7 @@
                 <h4 class="tile-header">Ventas de Huevos</h4>
            <list-ventas-huevos :ventas="ventas" @change="load"></list-ventas-huevos>
               </div>
-              <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/huevos/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+              <show-pdf v-if="resumen('reporte')" :src="src_reporte" ></show-pdf>
             
           </div>
         </div>
@@ -61,6 +61,7 @@
    import listPorduccion from './list-produccion-huevos.vue'
    import listVentas from './list-ventas-huevos.vue'
      import estadisticas from './estadisticas-huevos.vue'
+     import path from 'path'
     export default 
     {
         name:'resumen-huevos',
@@ -102,9 +103,12 @@
             
             this.load();
         },
-        computed:
+         computed:
         {
-          
+          src_reporte()
+          {
+            return path.join(this.$store.getters.ApiServer,'/api/huevos/reporte')+'?'+this.query+(this.id_galpon?'&id_galpon='+this.id_galpon:'')
+          }
         },
         methods:
         {

@@ -13,7 +13,7 @@
       </li>
       <div class="app-notification__content">
         <li v-for="item in notificaciones">
-          <a :class="['app-notification__item',item.visto==1?'visto':'']" :href="item.href_notificacion" @click.prevent="notificacion(item)">
+          <a :class="['app-notification__item',item.visto==1?'visto':'']" :href="ApiServer+item.href_notificacion" @click.prevent="notificacion(item)">
             <span class="app-notification__icon">
               <span class="fa fa-stack fa-lg">
                 <i :class="'fa fa-circle fa-stack-2x text-'+item.tipo_notificacion"></i>
@@ -38,7 +38,7 @@ import axios from 'axios'
 var CancelToken = axios.CancelToken;
 var source = CancelToken.source();
 import notify from '../../assets/js/notify.js'
-
+import path from 'path'
 const TIME_NOTIFICACION=20000;
 	export default
 	{
@@ -63,9 +63,13 @@ const TIME_NOTIFICACION=20000;
             })
             ///console.log(n);
             return n.length;
+          },
+          ApiServer()
+          {
+            return this.$store.getters.ApiServer
           }
         },
-
+       
         methods:
         {
           tiempo(notificaciones)
@@ -132,7 +136,7 @@ const TIME_NOTIFICACION=20000;
 
               this.updateNotification(req.data);
               not.visto=true;
-              this.$router.replace(this.$store.getters.ApiServer+not.href_notificacion);
+              this.$router.replace(path.join(this.$store.getters.ApiServer,not.href_notificacion));
             }).catch(AxiosCatch);
           },
           launchNotification(notification)

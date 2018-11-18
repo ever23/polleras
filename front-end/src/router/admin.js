@@ -49,9 +49,10 @@ import resumen_empleados from '../components/view/empleados/resumen-empleados.vu
 import agregar_galpon from '../components/view/galpones/agregar-galpon.vue'
 import resumen_galpones from '../components/view/galpones/resumen-galpones.vue'
 import $store from '@/store'
+import path from 'path'
 export default
 {
-    path: $store.getters.ApiServer+'/',
+    path: path.join($store.getters.ApiServer,'/'),
     component:admin,
     children:
     [
