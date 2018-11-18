@@ -117,7 +117,7 @@
                   {
                    
 
-                    axios.post('/polleras/api/empleados/asistir',{ci_empleado:item.ci_empleado}).
+                    axios.post('/api/empleados/asistir',{ci_empleado:item.ci_empleado}).
                     then(req=>
                     {
                       if(req.data.asistio)
@@ -155,7 +155,7 @@
                   { 
                    
                    // delete(this.proyectos[index]);
-                    axios.get('/polleras/api/empleados/eliminar?ci_empleado='+item.ci_empleado)
+                    axios.get('/api/empleados/eliminar?ci_empleado='+item.ci_empleado)
                     .then(request=>
                     {
                       if(request.data.eliminado)

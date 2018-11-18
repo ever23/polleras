@@ -23,7 +23,7 @@
         created()
         {
            this.galpon=this.id_galpon;
-          axios.get('/polleras/api/galpones').then((res)=>
+          axios.get('/api/galpones').then((res)=>
           {
            this.galpones=res.data.galpones.filter(typeof this.filter=='function'?this.filter:h=>true);
            if(this.id_galpon)

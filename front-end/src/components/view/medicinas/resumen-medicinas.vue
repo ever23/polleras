@@ -48,7 +48,7 @@
                 <h4 class="tile-header">Consumos de Medicinas</h4>
            <list-consumos-medicinas :consumos="consumos"  @change="load(null)"></list-consumos-medicinas>
               </div>
-              <show-pdf v-if="resumen('reporte')" :src="'/polleras/api/medicinas/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+              <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/medicinas/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
             
           </div>
         </div>
@@ -114,14 +114,14 @@
           {
             if(this.id_galpon)
             {
-              axios.get('/polleras/api/galpones/?id_galpon='+this.id_galpon).then(req=>
+              axios.get('/api/galpones/?id_galpon='+this.id_galpon).then(req=>
               {
                   this.galpon=req.data.galpones[0];
               }).catch(AxiosCatch);
             }
              this.query=data;
              this.$store.commit('loading',true);
-            axios.get('/polleras/api/medicinas/resumen?'+data+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
+            axios.get('/api/medicinas/resumen?'+data+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
             .then(request=>
             {
                this.$store.commit('loading',false);

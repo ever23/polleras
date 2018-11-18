@@ -78,7 +78,7 @@ import select_galpon from '../galpones/select-galpon.vue'
 			
 			this.compra.id_medicina=this.id_medicina;
 			 this.$store.commit('loading',true);
-            axios.get('/polleras/api/medicinas/?id_medicina='+this.id_medicina)
+            axios.get('/api/medicinas/?id_medicina='+this.id_medicina)
             .then(request=>
             {
             	 this.$store.commit('loading',false);
@@ -108,7 +108,7 @@ import select_galpon from '../galpones/select-galpon.vue'
 			Enviar()
 			{
 				
-				axios.post('/polleras/api/medicinas/consumo',this.compra)
+				axios.post('/api/medicinas/consumo',this.compra)
                 .then(request => 
                 {
                     if(request.data.insert)

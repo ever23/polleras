@@ -80,7 +80,7 @@ import axios from 'axios'
             refresh()
             {
                 this.$store.commit('loading',true);
-               axios.get('/polleras/api/user/lista')
+               axios.get('/api/user/lista')
                 .then(request=>
                 {
                    this.$store.commit('loading',false);
@@ -109,7 +109,7 @@ import axios from 'axios'
                   {
                    // delete(this.proyectos[index]);
                     this.$store.commit('loading',true);
-                    axios.delete('/polleras/api/user/eliminar?id_usuarios='+user.id_usuarios)
+                    axios.delete('/api/user/eliminar?id_usuarios='+user.id_usuarios)
                     .then(request=>
                     {
                        this.$store.commit('loading',false);

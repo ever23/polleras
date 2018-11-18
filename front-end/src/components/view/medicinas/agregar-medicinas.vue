@@ -82,7 +82,7 @@ import axios from 'axios';
 			Enviar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/medicinas/'+this.type.toLowerCase(),this.medicina)
+				axios.post('/api/medicinas/'+this.type.toLowerCase(),this.medicina)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

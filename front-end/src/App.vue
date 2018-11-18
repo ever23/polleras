@@ -19,6 +19,7 @@
         created()
         {
           this.$store.dispatch('fetch').catch(AxiosCatch);
+          //console.log(this.$createElement('div'))
         },
         watch: {
           '$route' (to, from) 

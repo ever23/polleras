@@ -48,11 +48,11 @@ import resumen_empleados from '../components/view/empleados/resumen-empleados.vu
 //galpones 
 import agregar_galpon from '../components/view/galpones/agregar-galpon.vue'
 import resumen_galpones from '../components/view/galpones/resumen-galpones.vue'
+import $store from '@/store'
 export default
 {
-    path: '/polleras/',
+    path: $store.getters.ApiServer+'/',
     component:admin,
-
     children:
     [
         { path: '/',name:'inicio', component: inicio },

@@ -84,7 +84,7 @@ import axios from 'axios';
 			if(this.empleados.ci_empleado)
 			{
 				 this.$store.commit('loading',true);
-				axios.get('/polleras/api/empleados/?ci_empleado='+this.ci_empleado).then(req=>
+				axios.get('/api/empleados/?ci_empleado='+this.ci_empleado).then(req=>
 				{
 					 this.$store.commit('loading',false);
 					if(req.data.empleados.length==0)
@@ -125,12 +125,12 @@ import axios from 'axios';
 				let url='',p='';
 				if(this.type=='Agregar')
 				{
-					url='/polleras/api/empleados/insertar';
+					url='/api/empleados/insertar';
 					p='agregado'
 
 				}else
 				{
-					url='/polleras/api/empleados/editar';
+					url='/api/empleados/editar';
 					p='editado'
 				}
 				 this.$store.commit('loading',true);

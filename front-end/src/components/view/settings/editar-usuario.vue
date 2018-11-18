@@ -57,7 +57,7 @@ import axios from 'axios'
 		{
 			this.user.id_usuarios=this.id_usuarios;
 			 this.$store.commit('loading',true);
-			axios.get('/polleras/api/user/user?id_usuarios='+this.id_usuarios).
+			axios.get('/api/user/user?id_usuarios='+this.id_usuarios).
 			then((req)=>
 			{
 				 this.$store.commit('loading',false);
@@ -79,7 +79,7 @@ import axios from 'axios'
 			editar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/user/editar',this.user).
+				axios.post('/api/user/editar',this.user).
 				then((request)=>
 				{
 					 this.$store.commit('loading',false);

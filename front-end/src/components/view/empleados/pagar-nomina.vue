@@ -73,7 +73,7 @@ import axios from 'axios';
 		created()
 		{
 			 this.$store.commit('loading',true);
-			axios.get('/polleras/api/empleados/nomina').
+			axios.get('/api/empleados/nomina').
 			then(req=>
 				{
 					 this.$store.commit('loading',false);
@@ -120,7 +120,7 @@ import axios from 'axios';
                   if (isConfirm) 
                   { 
                   	 this.$store.commit('loading',true);
-					axios.post('/polleras/api/empleados/pago_nomina',this.nomina)
+					axios.post('/api/empleados/pago_nomina',this.nomina)
 	                .then(request => 
 	                {
 	                	 this.$store.commit('loading',false);

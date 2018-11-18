@@ -62,6 +62,7 @@ class Csettings extends Controllers implements AccessUserController
         $file = dirname(__FILE__) . '/../settings.json';
         $Settings = new Json();
         $Settings->SetJsonFile($file);
+        $Settings->imagen = "data:" . $Settings->imagen['type'] . ";base64," . base64_encode(file_get_contents(dirname(__FILE__) . '/../icono'));
         $res['settings'] = $Settings;
     }
 

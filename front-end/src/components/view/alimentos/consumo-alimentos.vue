@@ -85,7 +85,7 @@ import {fecha,hora} from '../../../assets/js/Date.js'
 			fetch(id_galpon,fecha)
 			{
 				this.$store.commit('loading',true);
-				axios.get('/polleras/api/galpones/?id_galpon='+id_galpon+(fecha?'&fecha='+fecha:'')).then(req=>
+				axios.get('/api/galpones/?id_galpon='+id_galpon+(fecha?'&fecha='+fecha:'')).then(req=>
 				{
 					 this.$store.commit('loading',false);
 					if(req.data.galpones.length!=1)
@@ -117,7 +117,7 @@ import {fecha,hora} from '../../../assets/js/Date.js'
 				 this.$store.commit('loading',true);
 				 let fecha=this.alimentos.fecha;
 				 this.alimentos.fecha=this.alimentos.fecha.replace('T',' ')+':00'
-				axios.post('/polleras/api/alimentos/consumo',this.alimentos)
+				axios.post('/api/alimentos/consumo',this.alimentos)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

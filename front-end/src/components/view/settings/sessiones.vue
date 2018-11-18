@@ -70,7 +70,7 @@ import axios from 'axios'
             refresh()
             {
                 this.$store.commit('loading',true);
-               axios.get('/polleras/api/user/sessiones')
+               axios.get('/api/user/sessiones')
                 .then(request=>
                 {
                      this.$store.commit('loading',false);
@@ -87,7 +87,7 @@ import axios from 'axios'
                 if(user.status!='cerrado')
                 {
                     this.$store.commit('loading',true);
-                    axios.get('/polleras/api/user/closesessione?id_session='+user.id_session).then(req=>
+                    axios.get('/api/user/closesessione?id_session='+user.id_session).then(req=>
                         {
                             this.$store.commit('loading',false);
                             if(req.data.cerrado)

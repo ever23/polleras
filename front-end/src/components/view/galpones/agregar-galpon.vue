@@ -71,7 +71,7 @@ import axios from 'axios';
 			if(this.id_galpon)
 			{
 				 this.$store.commit('loading',true);
-				axios.get('/polleras/api/galpones/?id_galpon='+this.id_galpon).then(req=>
+				axios.get('/api/galpones/?id_galpon='+this.id_galpon).then(req=>
 				{
 					 this.$store.commit('loading',false);
 					if(req.data.galpones.length==0)
@@ -104,12 +104,12 @@ import axios from 'axios';
 				let url='',p='';
 				if(this.type=='Agregar')
 				{
-					url='/polleras/api/galpones/insertar';
+					url='/api/galpones/insertar';
 					p='agregado'
 
 				}else
 				{
-					url='/polleras/api/galpones/editar?id_galpon='+this.id_galpon;
+					url='/api/galpones/editar?id_galpon='+this.id_galpon;
 					p='editado'
 				}
 				 this.$store.commit('loading',true);

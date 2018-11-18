@@ -3,7 +3,7 @@
       <div class="app-sidebar__user">
         
         <div>
-         <img class="app-sidebar__user-avatar img-fluid " src="/polleras/api/settings/imagen" style="max-width: 90%;" alt="Logo granga">
+         <img class="app-sidebar__user-avatar img-fluid " :src="imagen" style="max-width: 90%;" alt="Logo granga">
           <!--<p class="app-sidebar__user-name">{{ User.nombres }}</p><b><i> ({{ User.permisos }})</i></b>-->
         </div>
       </div>
@@ -43,6 +43,11 @@
             User()
             {
                 return this.$store.getters.User;
+            },
+            imagen()
+            {
+              //console.log(this.$store.getters.settings)
+              return this.$store.getters.settings.imagen;
             }
         }
     }

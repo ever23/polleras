@@ -48,7 +48,7 @@
                 <h4 class="tile-header">Ventas de Huevos</h4>
            <list-ventas-huevos :ventas="ventas" @change="load"></list-ventas-huevos>
               </div>
-              <show-pdf v-if="resumen('reporte')" :src="'/polleras/api/huevos/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+              <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/huevos/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
             
           </div>
         </div>
@@ -117,14 +117,14 @@
           {
             if(this.id_galpon)
             {
-              axios.get('/polleras/api/galpones/?id_galpon='+this.id_galpon).then(req=>
+              axios.get('/api/galpones/?id_galpon='+this.id_galpon).then(req=>
               {
                   this.galpon=req.data.galpones[0];
               }).catch(AxiosCatch);
             }
             this.query=query;
              this.$store.commit('loading',true);
-            axios.get('/polleras/api/huevos/resumen?'+query+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
+            axios.get('/api/huevos/resumen?'+query+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
             .then(request=>
             {
                this.$store.commit('loading',false);

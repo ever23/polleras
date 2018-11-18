@@ -94,7 +94,7 @@ import axios from 'axios';
 			Enviar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/alimentos/insertar',this.alimentos)
+				axios.post('/api/alimentos/insertar',this.alimentos)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

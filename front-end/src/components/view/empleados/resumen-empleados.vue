@@ -61,9 +61,9 @@
               </div>
               <div class="tile" v-if="resumen('reporte')" >
               <select class="form-control" v-model="selectpdf" name="selectpdf">
-                <option value="/polleras/api/empleados/nominapdf?"><i class="fa fa-users"></i> Nomina</option>
-                <option value="/polleras/api/empleados/pagospdf?"><i class="fa fa-dollar"></i> Pagos</option>
-                <option value="/polleras/api/empleados/asistenciapdf?"><i class="fa fa-check"></i>  Asistencia</option>
+                <option value="$store.getters.ApiServer+'/api/empleados/nominapdf?"><i class="fa fa-users"></i> Nomina</option>
+                <option value="$store.getters.ApiServer+'/api/empleados/pagospdf?"><i class="fa fa-dollar"></i> Pagos</option>
+                <option value="$store.getters.ApiServer+'/api/empleados/asistenciapdf?"><i class="fa fa-check"></i>  Asistencia</option>
               </select>
                 <show-pdf :src="selectpdf+query" ></show-pdf>
               </div>
@@ -105,7 +105,7 @@
                 
                 obreros:0,
                 supervisores:0,
-                selectpdf:'/polleras/api/empleados/nominapdf?',
+                selectpdf:null,
                 query:''
                
                
@@ -114,6 +114,7 @@
         
         created()
         {
+			this.selectpdf=this.$store.getters.ApiServer+'/api/empleados/nominapdf?';
             this.load();
             
         },
@@ -127,7 +128,7 @@
           {
             this.query=query;
              this.$store.commit('loading',true);
-            axios.get('/polleras/api/empleados/resumen?'+query)
+            axios.get('/api/empleados/resumen?'+query)
             .then(request=>
             {
                this.$store.commit('loading',false);

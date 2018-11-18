@@ -126,15 +126,13 @@ const TIME_NOTIFICACION=20000;
               data+='&fech_notificacion='+this.notificaciones[0].fech_notificacion;
             }
 
-            axios.get('/polleras/api/notificaciones'+data).
+            axios.get('/api/notificaciones'+data).
             then(req=>
             {
 
               this.updateNotification(req.data);
               not.visto=true;
-            
-              
-              this.$router.replace('/polleras'+not.href_notificacion);
+              this.$router.replace(this.$store.getters.ApiServer+not.href_notificacion);
             }).catch(AxiosCatch);
           },
           launchNotification(notification)
@@ -157,7 +155,7 @@ const TIME_NOTIFICACION=20000;
               data='?fech_notificacion='+this.notificaciones[0].fech_notificacion;
             }
             if(this.$store.getters.User.permisos!==null)
-            axios.get('/polleras/api/notificaciones/now'+data,{cancelToken: source.token})
+            axios.get('/api/notificaciones/now'+data,{cancelToken: source.token})
             .then(request=>
             {
               this.updateNotification(request.data);

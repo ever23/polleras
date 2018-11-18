@@ -129,7 +129,7 @@
         {
           let t=new Date();
            this.$store.commit('loading',true);
-          axios.get('/polleras/api/?year='+t.getFullYear()).then(req=>
+          axios.get('/api/?year='+t.getFullYear()).then(req=>
           {
              this.$store.commit('loading',false);
             this.usuarios=req.data.usuarios;

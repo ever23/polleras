@@ -91,7 +91,7 @@
           {
             this.query=query;
              this.$store.commit('loading',true);
-            axios.get('/polleras/api/galpones/resumen?'+query)
+            axios.get('/api/galpones/resumen?'+query)
             .then(request=>
             {
                this.$store.commit('loading',false);

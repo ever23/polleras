@@ -104,7 +104,7 @@ import select_galpon from '../galpones/select-galpon.vue'
 			Enviar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/huevos/insertar',this.huevos)
+				axios.post('/api/huevos/insertar',this.huevos)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

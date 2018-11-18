@@ -98,7 +98,7 @@
                   if (isConfirm) 
                   { 
                    // delete(this.proyectos[index]);
-                    axios.delete('/polleras/api/medicinas/eliminar?id_medicina='+item.id_medicina)
+                    axios.delete('/api/medicinas/eliminar?id_medicina='+item.id_medicina)
                     .then(request=>
                     {
                       if(request.data.eliminado)

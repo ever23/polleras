@@ -3,9 +3,10 @@ import login_form from '../components/view/login/login-form.vue'
 import recuperapass from '../components/view/login/recupera-pass.vue'
 import Admin404 from '../components/view/login404.vue'
 import LockScreen from '../components/view/login/LockScreen.vue'
+import $store from '@/store'
 export default
 {
-    path: '/polleras/login',
+    path: $store.getters.ApiServer+'/login',
     component:login,
     children:
     [

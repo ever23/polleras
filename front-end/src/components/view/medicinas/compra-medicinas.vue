@@ -70,7 +70,7 @@ import {fecha} from '../../../assets/js/Date.js'
 			
 			this.compra.id_medicina=this.id_medicina;
 			 this.$store.commit('loading',true);
-            axios.get('/polleras/api/medicinas/?id_medicina='+this.id_medicina)
+            axios.get('/api/medicinas/?id_medicina='+this.id_medicina)
             .then(request=>
             {
             	 this.$store.commit('loading',false);
@@ -96,7 +96,7 @@ import {fecha} from '../../../assets/js/Date.js'
 			Enviar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/medicinas/compra',this.compra)
+				axios.post('/api/medicinas/compra',this.compra)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

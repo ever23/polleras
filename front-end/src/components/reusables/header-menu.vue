@@ -89,7 +89,7 @@ var source = CancelToken.source();
         created()
         {
            //this.$store.commit('loading',true);
-           axios.get('/polleras/api/settings/settings').then(req=>
+           axios.get('/api/settings/settings').then(req=>
             {
                //this.$store.commit('loading',false);
                 this.nombre=req.data.settings.nombre;

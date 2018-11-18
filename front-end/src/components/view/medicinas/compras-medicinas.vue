@@ -38,7 +38,7 @@
         {
             select()
             {
-                axios.get('/polleras/api/medicinas/compras')
+                axios.get('/api/medicinas/compras')
               .then(request=>
               {
                   if(!request.data.error)

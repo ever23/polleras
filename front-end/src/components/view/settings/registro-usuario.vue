@@ -117,7 +117,7 @@ import axios from 'axios';
 				if(!this.ValidForm())
 				return;
 			 this.$store.commit('loading',true);
-				axios.post('/polleras/api/user/registro',this.user)
+				axios.post('/api/user/registro',this.user)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

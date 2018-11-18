@@ -52,7 +52,7 @@ import axios from 'axios'
 			editar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/user/CambiarContrasena',this.user).
+				axios.post('/api/user/CambiarContrasena',this.user).
 				then((request)=>
 				{
 					 this.$store.commit('loading',false);

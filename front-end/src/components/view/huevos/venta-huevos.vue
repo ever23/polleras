@@ -103,7 +103,7 @@ import {fecha} from '../../../assets/js/Date.js'
 		created()
 		{
 			 this.$store.commit('loading',true);
-            axios.get('/polleras/api/huevos/index')
+            axios.get('/api/huevos/index')
             .then(request=>
             {
                this.$store.commit('loading',false);
@@ -140,7 +140,7 @@ import {fecha} from '../../../assets/js/Date.js'
 			Enviar()
 			{
 				 this.$store.commit('loading',true);
-				axios.post('/polleras/api/huevos/venta',this.huevos)
+				axios.post('/api/huevos/venta',this.huevos)
                 .then(request => 
                 {
                 	 this.$store.commit('loading',false);

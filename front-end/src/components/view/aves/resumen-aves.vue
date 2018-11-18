@@ -58,7 +58,7 @@
                 <h4 class="tile-header">Muerte de Aves</h4>
         <list-mortalidad-aves :muertes="muertes" :id_galpon="id_galpon" @change="load"></list-mortalidad-aves>
               </div>
-            <show-pdf v-if="resumen('reporte')" :src="'/polleras/api/aves/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
+            <show-pdf v-if="resumen('reporte')" :src="$store.getters.ApiServer+'/api/aves/reporte?'+query+(id_galpon?'&id_galpon='+id_galpon:'')" ></show-pdf>
           </div>
         </div>
       </div>
@@ -129,14 +129,14 @@
            
            if(this.id_galpon)
             {
-              axios.get('/polleras/api/galpones/?id_galpon='+this.id_galpon).then(req=>
+              axios.get('/api/galpones/?id_galpon='+this.id_galpon).then(req=>
               {
                   this.galpon=req.data.galpones[0];
               }).catch(AxiosCatch);
             }
            this.query=query;
              this.$store.commit('loading',true);
-            axios.get('/polleras/api/aves/resumen?'+query+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
+            axios.get('/api/aves/resumen?'+query+(this.id_galpon?'&id_galpon='+this.id_galpon:''))
             .then(request=>
             {
                this.$store.commit('loading',false);

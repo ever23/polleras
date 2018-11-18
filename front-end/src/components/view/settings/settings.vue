@@ -65,10 +65,10 @@ import axios from 'axios'
 			        Submited:1
 				},
 				errores:{},
-				imagen:'/polleras/api/settings/imagen'
+				imagen:null
 			}
 		},
-		created()
+		created() 
 		{
 			this.config.nombre=this.$store.getters.settings.nombre;
 			this.config.usoGalpon=this.$store.getters.settings.usoGalpon;
@@ -76,6 +76,7 @@ import axios from 'axios'
 			this.config.produccion=this.$store.getters.settings.produccion;
 			this.config.moneda=this.$store.getters.settings.moneda;
 			this.config.umalimentos=this.$store.getters.settings.umalimentos;
+			this.imagen=this.$store.getters.settings.imagen;
 			
 		},
 		methods:
@@ -97,7 +98,7 @@ import axios from 'axios'
 				      'content-type': 'multipart/form-data'
 				   }
 				};
-				axios.post('/polleras/api/settings',data,config).
+				axios.post('/api/settings',data,config).
 				then((request)=>
 				{
 					if(request.data.editado)
