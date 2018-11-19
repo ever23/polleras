@@ -51,41 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "'use strict'\n\nimport { app, BrowserWindow,ipcMain,screen} from 'electron'\n//console.log(app);\n/**\n * Set `__static` path to static files in production\n * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html\n */  \nif (process.env.NODE_ENV !== 'development') {\n  global.__static = require('path').join(__dirname, '/static').replace(/\\\\/g, '\\\\\\\\')\n}\n \nlet mainWindow\nlet loginWindow\nlet loaderWindow\nconst winURL = process.env.NODE_ENV === 'development'? `http://localhost:9080`:`file://${__dirname}/index.html`\nconst loaaderURL=process.env.NODE_ENV === 'development'? `http://localhost:9080/loading.html`:`file://${__dirname}/loading.html`\n//const winURL =`file:///I:/Programacion/node.js/polleras-desktop/dist/electron/index.html`;\n function  createWindow () {\n  /**\n   * Initial window options\n   */\n   loaderWindow = new BrowserWindow({\n    height: 300,\n    useContentSize: true,\n    width: 300,\n    //webPreferences:{webSecurity:false},\n    show:false, \n    title:\"loading\", \n    //transparent:true,\n    //nodeIntegrationInWorker:true,\n    frame: false,// ventana sin bordde\n    backgroundColor:\"#009688\",\n    offscreen:true\n    //icon:__dirname+'/../../build'\n  })\n   loaderWindow.on('ready-to-show',()=>loaderWindow.show())\n   loaderWindow.loadURL(loaaderURL) \n   loginWindow = new BrowserWindow({\n    height: 600,\n    useContentSize: true,\n    width: 550,\n    webPreferences:{webSecurity:false},\n    show:false,\n    title:\"Login\",\n    //transparent:true,\n     nodeIntegrationInWorker:true,\n     //frame: false// ventana sin bordde\n    \n    //icon:__dirname+'/../../build'\n  })\n//console.log(mainWindow);\nloginWindow.loadURL(winURL+'#login')\n \n  loginWindow.on('closed', () => {\n   \n    loginWindow = null\n    if(mainWindow)\n    {\n        loaderWindow.close()\n        \n    }\n     ;\n     mainWindow = null\n  })\n\nconst {width, height} = screen.getPrimaryDisplay().workAreaSize\n  mainWindow = new BrowserWindow({\n    height: height,\n    useContentSize: true,\n    width: width,\n    webPreferences:{webSecurity:false},\n     show:false,\n     nodeIntegrationInWorker:true,\n      //frame: false// ventana sin bordde\n    // parent:loginWindow\n    //icon:__dirname+'/../../build'\n  })\n  mainWindow.loadURL('about:blank')\n //mainWindow.maximize();\n//console.log(mainWindow);\n  //mainWindow.loadURL(winURL)\n  mainWindow.on('show',()=>loaderWindow.hide());\n  loginWindow.on('show',()=>loaderWindow.hide());\n   mainWindow.on('close', () => {\n   mainWindow.webContents.send('closed-all');\n  })\n  mainWindow.on('closed', () => {\n    // console.log('closed')\n    mainWindow = null\n    if(loginWindow)\n    {\n      loginWindow.close();\n      loaderWindow.close()\n    }\n    \n    loginWindow=null;\n  })\n}\n\napp.on('ready', createWindow)\n\napp.on('window-all-closed', () => {\n  if(mainWindow)\n  mainWindow.webContents.send('closed-all');\n  if (process.platform !== 'darwin') {\n    app.quit()\n  }\n})\n \napp.on('activate', () => {\n  if (mainWindow === null && loginWindow===null) {\n    createWindow()\n  }\n  //loginWindow.webContents.send('pushLogin');\n}) \n\nipcMain.on('login',(event,agrs)=>\n{ \n  mainWindow.loadURL(winURL)\n  mainWindow.webContents.send('login');\n  loaderWindow.show()\n  loginWindow.hide()\n  //mainWindow.once('show',()=>loaderWindow.hinde());\n  //mainWindow.show();\n});\nipcMain.on('logout',(event,agrs)=>\n{\n \n  if(mainWindow.isVisible())\n  {\n    mainWindow.loadURL('about:blank')\n    //loginWindow.on('show',()=> loginWindow.hide());\n     //loginWindow.on('show',()=> mainWindow.hide());\n    mainWindow.hide();\n    loginWindow.show(); \n    loginWindow.webContents.send('logout',agrs);\n  }\n \n})\n\nexports.loginWindow=loginWindow;\n/**\n * Auto Updater\n *\n * Uncomment the following code below and install `electron-updater` to\n * support auto updating. Code Signing with a valid certificate is required.\n * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-electron-builder.html#auto-updating\n */\n\n/*\nimport { autoUpdater } from 'electron-updater'\n\nautoUpdater.on('update-downloaded', () => {\n  autoUpdater.quitAndInstall()\n})\n\napp.on('ready', () => {\n  if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()\n})\n */\n",
-			"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.js",
-			"file_size": 4186,
-			"file_write_time": 131869632714984000,
-			"settings":
-			{
-				"buffer_size": 4168,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
-			"settings":
-			{
-				"buffer_size": 717,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/I/Programacion/node.js/polleras-desktop/src/loading.html",
-			"settings":
-			{
-				"buffer_size": 5572,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/login-form.vue",
-			"settings":
-			{
-				"buffer_size": 2836,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "Packages/User/vue-run-dev.sublime-build",
 	"command_palette":
@@ -118,14 +83,34 @@
 	},
 	"file_history":
 	[
-		"/I/Programacion/php/polleras/front-end/src/router/admin.js",
-		"/I/Programacion/php/polleras/front-end/src/store/index.js",
-		"/I/Programacion/php/polleras/front-end/src/router/login.js",
-		"/I/Programacion/php/polleras/front-end/src/main.js",
+		"/I/Programacion/node.js/polleras-desktop/src/loading.html",
+		"/I/Programacion/node.js/polleras-desktop/package.json",
+		"/I/Programacion/php/polleras/front-end/package.json",
+		"/I/Programacion/php/polleras/front-end/README.md",
+		"/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
+		"/I/Programacion/node.js/polleras-desktop/src/main/index.js",
+		"/I/Programacion/php/polleras/README.MD",
+		"/I/Programacion/php/polleras/composer.json",
+		"/E/www/GitHub/laravel/composer.json",
+		"/E/www/GitHub/laravel/readme.md",
+		"/E/www/GitHub/cv/README.md",
+		"/I/Programacion/php/Curriculum/README.md",
+		"/I/Programacion/php/Curriculum/composer.json",
+		"/I/Programacion/node.js/polleras-desktop/src/main/mainWindow.js",
+		"/I/Programacion/php/polleras/front-end/src/components/view/alimentos/resumen-alimentos.vue",
+		"/I/Programacion/php/polleras/front-end/src/components/view/aves/resumen-aves.vue",
+		"/I/Programacion/php/polleras/front-end/src/components/view/huevos/resumen-huevos.vue",
+		"/I/Programacion/php/polleras/front-end/src/components/view/medicinas/resumen-medicinas.vue",
+		"/I/Programacion/php/polleras/front-end/src/components/view/empleados/resumen-empleados.vue",
+		"/I/Programacion/php/polleras/front-end/index.ejs",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/notificaciones.vue",
+		"/I/Programacion/php/polleras/front-end/src/router/admin.js",
+		"/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
+		"/I/Programacion/php/polleras/front-end/src/router/login.js",
+		"/I/Programacion/php/polleras/front-end/src/store/index.js",
+		"/I/Programacion/php/polleras/front-end/src/main.js",
 		"/I/Programacion/php/polleras/front-end/config/index.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/localSettings.js",
-		"/I/Programacion/php/polleras/front-end/index.ejs",
 		"/I/Programacion/php/polleras/front-end/build/webpack.base.conf.js",
 		"/I/Programacion/php/polleras/front-end/build/webpack.prod.conf.js",
 		"/I/Programacion/php/polleras/front-end/build/webpack.dev.conf.js",
@@ -141,9 +126,7 @@
 		"/I/Programacion/php/polleras/front-end/src/components/view/settings/settings.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/aside-menu.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/settings.js",
-		"/I/Programacion/node.js/polleras-desktop/src/renderer/main.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/estadisticas-alimentos.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/main/index.js",
 		"/E/www/CcMvc/README.md",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/notificaciones.vue",
 		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
@@ -157,7 +140,6 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/formulario.vue",
 		"/C/xampp/apache/conf/httpd.conf",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/edit-api.vue",
-		"/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
 		"/I/Programacion/node.js/polleras-desktop/node_modules/electron/index.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/treeview-menu.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/index.js",
@@ -198,7 +180,6 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/polleras-desktop-app.json",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/router/login.js",
 		"/I/Programacion/node.js/polleras-desktop/src/index.ejs",
-		"/I/Programacion/node.js/polleras-desktop/package.json",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/layaut/main-layaut.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/aside-menu.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/header-menu.vue",
@@ -294,127 +275,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4168,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1802,
-								1802
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1098.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 717,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								255,
-								255
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/I/Programacion/node.js/polleras-desktop/src/loading.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5572,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5346,
-								5346
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/login/login-form.vue",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2836,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1071,
-								1071
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/User/vue.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -1,9 +1,10 @@
 {
     "name": "frontend-granjas",
     "version": "1.0.0",
-    "description": "vue",
-    "author": "",
-    "private": true,
+    "description": "Sistema de control edtadistico de produccion avicola",
+    "author": "Enyerber Franco",
+    "license": "ISC",
+    
     "scripts": {
         "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
         "start": "npm run dev",
