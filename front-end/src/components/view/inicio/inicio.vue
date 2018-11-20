@@ -96,9 +96,9 @@
 
 <script>
   import axios from 'axios'
-   import  '../../../assets/js/plugins/chart.js'
-   import {meses} from '../../../assets/js/Date.js'
-    import filter from '../../../assets/js/UserVueFilter.js'
+   import  '@/assets/js/plugins/chart.js'
+   import {meses} from '@/assets/js/Date.js'
+    import filter from '@/assets/js/UserVueFilter.js'
     export default 
     {
        filters:filter,

@@ -1,5 +1,5 @@
 
-import store from '../../store'
+import store from '@/store'
 import notify from './notify.js'
 window.AxiosCatch=function(data)
 	{

@@ -37,7 +37,7 @@
 import axios from 'axios'
 var CancelToken = axios.CancelToken;
 var source = CancelToken.source();
-import notify from '../../assets/js/notify.js'
+import notify from '@/assets/js/notify.js'
 import path from 'path'
 const TIME_NOTIFICACION=20000;
 	export default

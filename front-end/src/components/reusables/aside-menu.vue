@@ -13,8 +13,8 @@
 </template>
 <script>
     import vuex from 'vuex';
-    import MenuRoot from '../../assets/menu.js'
-   // import MenuAdmin from '../../assets/menu-admin.js'
+    import MenuRoot from '@/assets/menu.js'
+   // import MenuAdmin from '@/assets/menu-admin.js'
     export default {
         name:'aside-menu',
         data () {
@@ -26,17 +26,7 @@
         },
         created()
         {
-          switch(this.User.permisos)
-          {
-            case 'root':
-              this.menu=MenuRoot;
-              break;
-            case 'admin': 
-              this.menu=MenuRoot;//MenuAdmin(this.User);
-              break;
-
-          }
-          
+           this.menu=MenuRoot;
         },
         computed:
         {

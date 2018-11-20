@@ -5,7 +5,7 @@
 </template>
 
 <script>
- import  '../../assets/js/plugins/chart.js'
+ import  '@/assets/js/plugins/chart.js'
     export default {
         name :'chart-line',
         

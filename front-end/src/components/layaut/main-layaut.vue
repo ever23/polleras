@@ -12,7 +12,7 @@
 </template>
 
 <script>
-   import notify from '../../assets/js/notify.js'
+   import notify from '@/assets/js/notify.js'
     export default {
         name:'main-layaut',
         

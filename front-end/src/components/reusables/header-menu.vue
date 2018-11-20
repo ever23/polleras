@@ -78,7 +78,7 @@
     import axios from 'axios'
   var CancelToken = axios.CancelToken;
 var source = CancelToken.source();
-   import {fechaHora} from '../../assets/js/Date.js'
+   import {fechaHora} from '@/assets/js/Date.js'
     export default {
         name:'header-menu',
         props:['timeOnline'],
