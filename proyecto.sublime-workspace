@@ -51,6 +51,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
+			"settings":
+			{
+				"buffer_size": 5075,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/vue-run-dev.sublime-build",
 	"command_palette":
@@ -83,6 +91,23 @@
 	},
 	"file_history":
 	[
+		"/I/Programacion/php/polleras/front-end/src/components/reusables/aside-menu.vue",
+		"/I/Programacion/php/polleras/front-end/src/components/reusables/Chart-line.vue",
+		"/I/Programacion/node.js/polleras-desktop/src/loading.ejs",
+		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
+		"/I/Programacion/node.js/polleras-desktop/node_modules/html-webpack-plugin/default_index.ejs",
+		"/I/Programacion/php/polleras/front-end/src/components/reusables/consulta-resumen.vue",
+		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.web.config.js",
+		"/I/Programacion/php/polleras/front-end/src/components/reusables/header-menu.vue",
+		"/I/Programacion/php/polleras/front-end/src/main.js",
+		"/I/Programacion/php/polleras/front-end/src/auth.js",
+		"/I/Programacion/php/polleras/front-end/src/assets/js/UserVueFilter.js",
+		"/I/Programacion/php/polleras/front-end/src/assets/js/main.js",
+		"/I/Programacion/php/polleras/front-end/src/assets/js/delete.js",
+		"/I/Programacion/php/polleras/front-end/src/router/admin.js",
+		"/I/Programacion/php/polleras/front-end/src/router/index.js",
+		"/I/Programacion/php/polleras/front-end/src/components/layaut/main-layaut.vue",
+		"/I/Programacion/php/polleras/front-end/src/router/login.js",
 		"/I/Programacion/node.js/polleras-desktop/src/loading.html",
 		"/I/Programacion/node.js/polleras-desktop/package.json",
 		"/I/Programacion/php/polleras/front-end/package.json",
@@ -104,21 +129,16 @@
 		"/I/Programacion/php/polleras/front-end/src/components/view/empleados/resumen-empleados.vue",
 		"/I/Programacion/php/polleras/front-end/index.ejs",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/notificaciones.vue",
-		"/I/Programacion/php/polleras/front-end/src/router/admin.js",
 		"/I/Programacion/node.js/polleras-desktop/src/main/index.dev.js",
-		"/I/Programacion/php/polleras/front-end/src/router/login.js",
 		"/I/Programacion/php/polleras/front-end/src/store/index.js",
-		"/I/Programacion/php/polleras/front-end/src/main.js",
 		"/I/Programacion/php/polleras/front-end/config/index.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/localSettings.js",
 		"/I/Programacion/php/polleras/front-end/build/webpack.base.conf.js",
 		"/I/Programacion/php/polleras/front-end/build/webpack.prod.conf.js",
 		"/I/Programacion/php/polleras/front-end/build/webpack.dev.conf.js",
-		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.web.config.js",
 		"/I/Programacion/php/polleras/front-end/src/App.vue",
 		"/I/Programacion/php/polleras/front-end/src/store/modules/settings.js",
 		"/I/Programacion/php/polleras/front-end/src/store/modules/auth.js",
-		"/I/Programacion/php/polleras/front-end/src/auth.js",
 		"/I/Programacion/php/polleras/front-end/src/store/modules/index.js",
 		"/I/Programacion/php/polleras/front-end/src/store/auth.js",
 		"/I/Programacion/php/polleras/front-end/src/store/settings.js",
@@ -129,7 +149,6 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/view/alimentos/estadisticas-alimentos.vue",
 		"/E/www/CcMvc/README.md",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/notificaciones.vue",
-		"/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/assets/js/notify.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/auth.js",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/store/modules/auth.js",
@@ -181,28 +200,26 @@
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/router/login.js",
 		"/I/Programacion/node.js/polleras-desktop/src/index.ejs",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/layaut/main-layaut.vue",
-		"/I/Programacion/php/polleras/front-end/src/components/reusables/aside-menu.vue",
-		"/I/Programacion/php/polleras/front-end/src/components/reusables/header-menu.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/view/settings/editar-usuario.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/view/inicio/inicio.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/reusables/app-title.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/layaut/login-layaut.vue",
 		"/I/Programacion/php/polleras/front-end/src/components/view/medicinas/agregar-medicinas.vue",
 		"/I/Programacion/node.js/polleras-desktop/src/renderer/components/reusables/app-title.vue",
-		"/I/Programacion/php/polleras/front-end/src/assets/js/UserVueFilter.js",
 		"/I/Programacion/php/polleras/front-end/static/js/plugins/fullcalendar.min.js",
 		"/C/Program Files/Sublime_Text/Data/Packages/User/vue-run-dev.sublime-build",
 		"/C/xampp/apache/conf/extra/httpd-ssl.conf"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
 		"height": 90.0,
 		"where_history":
 		[
+			"I:\\Programacion\\node.js\\polleras-desktop\\node_modules",
 			"I:\\Programacion\\php\\polleras\\front-end\\src",
 			"I:\\Programacion\\php\\polleras\\front-end\\build",
 			"I:\\Programacion\\php\\polleras\\front-end\\src",
@@ -216,9 +233,11 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"HtmlWebpackPlugin",
+			"../components",
 			"/polleras",
 			"BuildPath",
 			"assetsPublicPath",
@@ -248,6 +267,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"@/components",
 			"<%= appPublicPath %>",
 			""
 		],
@@ -275,8 +295,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/I/Programacion/node.js/polleras-desktop/.electron-vue/webpack.renderer.config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5075,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1609,
+								1609
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 810.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -322,7 +373,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 48.0
+		"height": 62.0
 	},
 	"save_all_on_build": true,
 	"select_file":

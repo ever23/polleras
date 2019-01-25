@@ -44,6 +44,7 @@ class Caves extends CostumController implements AccessUserController
 
     public function ventas(Json $res, DBtabla $venta_aves, $consulta = null, $query = null, $id_galpon = null)
     {
+
         $where = $id_galpon ? "id_galpon='" . $id_galpon . "'" : NULL;
         if ($consulta)
         {
